@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "HK Grotesk Bold";
+    src: url(../src/fonts/HKGrotesk-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "HK Grotesk SemiBold";
+    src: url(../src/fonts/HKGrotesk-SemiBold.otf) format("opentype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SFUIText-Regular";
+    src: url(../src/fonts/SFUIText-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SFUIText-SemiBold";
+    src: url(../src/fonts/SFUIText-Semibold.ttf) format("truetype");
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 15%;
+    background-color: #151B2B;
+}
+
+header .hding_logo h1 {
+    color: grey;
+}
+
+header h2 {
+    font-size: 46px;
+}
+
+header p:first-of-type {
+    font-family: "HK Grotesk SemiBold", sans-serif;
+    font-size: 25px;
+}
+
+header .hding_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .hding_block40 {
+    max-width: 40%;
+}
+
+header .hding_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+header .hding_text_h2 {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+header .hding_img img {
+    max-height: 500px;
+}
+
+.hding_cardgithub {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 28px;
+    gap: 0.3em;
+    padding: 0 15px;
+    border-radius: 0.2em;
+}
+
+.hding_cardgithub div {
+    height: max-content;
+}
+
+.hding_cardgithub div:last-of-type {
+    border-left: 2px solid lightgrey;
+    padding-left: 0.3em;
+}
+
+header .hding_socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+header .hding_socials a {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    padding: 12px 25px;
+    border-radius: 0.3em;
+    font-family: "SFUIText-SemiBold", sans-serif;
+    font-size: 14px;
+}
+
+header .hding_socials img {
+    margin-right: 0.2em;
+}
+
+header .hding_socials a:first-of-type {
+    background-color: #454658;
+}
+
+header .hding_socials a:nth-of-type(2) {
+    background-color: #6578C0;
+}
+
+header .hding_logo {
+    display: flex;
+}
+
+header .hding_logo img {
+    width: 40px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 80%;
+    margin: auto;
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 3em;
+
+}
+
+main #main_bg {
+    background-image: url('../src/ressources/bg_usage.png');
+    background-size: cover;
+    background-position: center;
+    height: 160px;
+
+}
+
+main h2 {
+    margin-bottom: 1em;
+}
+
+main h2,
+main article p {
+    text-align: center;
+}
+
+main article p {
+    font-size: 16px;
+}
+
+main .main_md2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+main .main_md2 section {
+    max-width: 40%;
+}
+
+footer .ft_card {
+    padding: 2em;
+}
+
+footer .ft_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .ft_sm {
+    max-width: 20%;
+}
+
+footer .ft_background {
+    background-color: #151B2B;
+    max-width: 100%;
+    height: 75px;
+}
+
+footer .ft_legal ul {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+footer .ft_legal li {
+    border-right: 1px solid grey;
+    padding-right: 1em;
+}
+
+footer .ft_legal li:last-of-type {
+    border: none;
+    padding-right: 0;
+}
+
+footer h2,
+footer h3 {
+    font-family: "SFUIText-SemiBold";
+}
+
+footer p,
+footer li {
+    color: grey;
+}
+
+
+
+
+
+
+h1,
+h2 {
+    font-family: "HK Grotesk Bold", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p,
+li {
+    font-family: "SFUIText-Regular", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
