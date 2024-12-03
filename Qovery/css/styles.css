@@ -144,6 +144,10 @@ main #main_bg {
 
 }
 
+main img {
+    max-width: 100%;
+}
+
 main h2 {
     margin-bottom: 1em;
     font-size: 32px;
@@ -323,4 +327,20 @@ ul {
 
 .card_socials a:nth-of-type(2) {
     background-color: #6578C0;
+}
+
+
+
+
+@media (max-width:2500px) {
+    header {
+        padding: 5% 10%;
+    }
+}
+
+
+@media (max-width:1250px) {
+    header {
+        padding: 5% 5%;
+    }
 }
