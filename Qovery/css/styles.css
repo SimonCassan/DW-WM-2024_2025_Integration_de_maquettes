@@ -128,6 +128,7 @@ header .header_socials a {
     display: flex;
     width: fit-content;
     align-items: center;
+    color: white;
     padding: 12px 25px;
     border-radius: 0.3em;
     font-family: "SFUIText-SemiBold", sans-serif;
@@ -287,8 +288,8 @@ footer h3 {
 
 a {
     text-decoration: none;
-    color: white;
 }
+
 
 p,
 li {
