@@ -45,6 +45,9 @@ header h1 {
     text-align: center;
     background-image: url('../src/ressources/planet_background.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
     padding: 80px 0;
 }
 
