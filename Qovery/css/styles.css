@@ -29,6 +29,7 @@
 }
 
 
+
 header {
     display: flex;
     flex-direction: column;
@@ -88,23 +89,7 @@ header .header_text_h2 h2 {
 }
 
 header .header_img img {
-    max-height: 500px;
-}
-
-.card_github {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    color: black;
-    height: 28px;
-    gap: 0.3em;
-    border-radius: 0.2em;
-    border: 1px solid lightgrey;
-    width: fit-content;
-}
-
-.card_github p {
-    text-wrap: nowrap;
+    max-width: 100%;
 }
 
 header .card_github {
@@ -112,11 +97,7 @@ header .card_github {
 }
 
 
-.card_github span {
-    padding-left: 0.3em;
-    border-left: 2px solid lightgrey;
-}
-
+/* ---------------------------------------------------- */
 
 
 main {
@@ -146,6 +127,7 @@ main #main_bg {
 
 main img {
     max-width: 100%;
+    max-height: 100%;
 }
 
 main h2 {
@@ -179,12 +161,36 @@ main .QV_partners div {
 main .main_md2 {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     text-align: justify;
 }
 
 main .main_md2 section {
     max-width: 40%;
 }
+
+main .main_md2 section h3 {
+    margin: 1.2em 0;
+    font-size: 24px;
+}
+
+main .main_md2 section p:nth-of-type(2) {
+    margin-top: 1.2em;
+}
+
+main .main_md2 section div {
+    margin-top: 1em;
+}
+
+main .main_md2 section a {
+    color: #5D64D2;
+    text-transform: uppercase;
+    font-family: "SFUIText-SemiBold";
+}
+
+
+/* --------------------------------------------------- */
+
 
 footer .ft_card {
     padding: 4em 12em;
@@ -273,8 +279,18 @@ footer li {
 }
 
 
+
+.card_github p,
+.card_socials,
+h2,
+h3 {
+    white-space: nowrap;
+}
+
+
 h1,
-h2 {
+h2,
+h3 {
     font-family: "HK Grotesk Bold", sans-serif;
 }
 
@@ -285,6 +301,13 @@ footer h3 {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+footer ul a:hover,
+.main_more a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 
@@ -302,8 +325,11 @@ ul {
 .card_socials {
     display: flex;
     justify-content: flex-start;
-    gap: 1em;
-    white-space: nowrap;
+    gap: 2em;
+}
+
+.card_socials img {
+    margin-right: 0.2em;
 }
 
 .card_socials a {
@@ -315,10 +341,7 @@ ul {
     border-radius: 0.3em;
     font-family: "SFUIText-SemiBold", sans-serif;
     font-size: 14px;
-}
-
-.card_socials img {
-    margin-right: 0.2em;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card_socials a:first-of-type {
@@ -329,18 +352,154 @@ ul {
     background-color: #6578C0;
 }
 
+.card_socials a:hover {
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+main .card_socials a:first-of-type:hover {
+    box-shadow: 0 5px 5px #585970;
+}
+
+.card_socials a:nth-of-type(2) {
+    background-color: #6578C0;
+}
+
+main .card_socials a:nth-of-type(2):hover {
+    box-shadow: 0 5px 5px #6c80cc;
+}
+
+
+.card_github {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 28px;
+    gap: 0.3em;
+    border-radius: 0.2em;
+    border: 1px solid lightgrey;
+    width: fit-content;
+}
+
+.card_github p {
+    color: black;
+}
+
+.card_github span {
+    padding-left: 0.3em;
+    border-left: 2px solid lightgrey;
+}
 
 
 
-@media (max-width:2500px) {
+
+
+
+
+
+@media screen and (max-width:2500px) {
     header {
         padding: 5% 10%;
     }
 }
 
 
-@media (max-width:1250px) {
+@media screen and (max-width:1250px) {
     header {
         padding: 5% 5%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    header .card_github {
+        display: none;
+    }
+
+    header .card_socials {
+        gap: 1em;
+    }
+
+    header .card_socials a {
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width:840px) {
+    header {
+        padding: 2.5% 2.5%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .header_img {
+        display: none;
+    }
+
+    header .header_block40 {
+        max-width: 80%;
+    }
+
+    header .header_text_h2,
+    header .header_content,
+    header .card_socials {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    header .header_content {
+        margin-top: 1%;
+    }
+
+    header .card_socials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .card_socials a {
+        font-size: 10px;
+    }
+
+    header p.header_subtitle {
+        font-size: 1.2em;
+    }
+
+    header .header_text_h2 h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 125%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    h1 {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header p.header_subtitle {
+        font-size: 1em;
+    }
+
+    header .header_text_h2 h2 {
+        font-size: 1.5em;
+    }
+
+    header .card_socials a {
+        font-size: 8px;
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 110%;
     }
 }
