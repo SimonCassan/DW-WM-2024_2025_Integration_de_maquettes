@@ -220,26 +220,21 @@ a:hover {
     text-transform: uppercase;
     text-align: center;
     font-size: 20px;
-    position: relative;
     margin: 4em 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
 }
 
-.asteroid:before,
-.asteroid:after {
+.asteroid::before,
+.asteroid::after {
     content: "";
-    position: absolute;
-    top: 50%;
+    flex: 1;
+    display: block;
     height: 3px;
     background: #000;
-    width: 450px;
-}
-
-.asteroid:before {
-    left: -500px;
-}
-
-.asteroid::after {
-    right: -500px;
 }
 
 .planet_info {
@@ -314,14 +309,8 @@ a:hover {
     }
 
     .asteroid {
-        font-size: 3em;
         margin-top: 2em;
         margin-bottom: 0.5em;
-    }
-
-    .asteroid:before,
-    .asteroid:after {
-        content: none;
     }
 
     footer .ft_cols section {
@@ -412,10 +401,6 @@ a:hover {
     }
 
     h1 {
-        font-size: 2em;
-    }
-
-    .asteroid {
         font-size: 2em;
     }
 
