@@ -101,6 +101,12 @@ main .content {
     padding-top: 3em;
 }
 
+main .content>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
 main .content h2 {
     font-size: 36px;
 }
@@ -225,15 +231,15 @@ a:hover {
     top: 50%;
     height: 3px;
     background: #000;
-    width: 392px;
+    width: 450px;
 }
 
 .asteroid:before {
-    left: -420px;
+    left: -500px;
 }
 
 .asteroid::after {
-    right: -420px;
+    right: -500px;
 }
 
 .planet_info {
