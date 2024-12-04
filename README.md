@@ -8,4 +8,4 @@ A responsive website with media queries
 Basic website with some responsive designs for tablets and iphone
 
 ***Qovery***
-More advanced website with incoming responsive design
+More advanced website with responsive design
