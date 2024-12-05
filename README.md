@@ -7,5 +7,5 @@ A responsive website with media queries
 ***Racoon***   
 Basic website with some responsive designs for tablets and iphone
 
-***Qovery***
+***Qovery***   
 More advanced website with responsive design
