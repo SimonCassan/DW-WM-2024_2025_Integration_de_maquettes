@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 * {
@@ -7,8 +8,21 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
-    font-family: Roboto, sans-serif;
+    font-family: sans-serif;
+}
+
+main {
+    font-family: Roboto;
+}
+
+header,
+footer {
+    font-family: Montserrat;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -49,7 +63,7 @@ header h1 {
 
 header nav a {
     color: #D9D9D9;
-    padding: 1em 0.75em;
+    padding: 1rem 0.75rem;
 }
 
 header nav a:hover {
@@ -60,8 +74,8 @@ header nav {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 header nav .logo {
@@ -78,12 +92,11 @@ footer {
     padding-right: 25%;
 }
 
-
-
 main {
     flex-direction: column;
     align-items: center;
-    margin: 0 25% 20px;
+    max-width: 1200px;
+    margin: 0 auto 1.2rem;
 }
 
 main img {
@@ -92,29 +105,29 @@ main img {
 
 main .content {
     align-items: center;
-    gap: 50px;
-    padding-top: 3em;
+    gap: 2rem;
+    padding-top: 3rem;
 }
 
 main .content>div {
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 0.6rem;
 }
 
 main .content h2 {
-    font-size: 36px;
+    font-size: 2rem;
 }
 
 main .content h2,
 main .content p {
-    margin-bottom: 10px;
+    margin-bottom: 0.8rem;
 }
 
 main .content p {
     text-align: justify;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
 }
 
 main .content:nth-of-type(2n) {
@@ -122,7 +135,7 @@ main .content:nth-of-type(2n) {
 }
 
 main .asteroid h2 {
-    font-size: 30px;
+    font-size: 1.9rem;
 }
 
 main .planet_info p {
@@ -133,7 +146,7 @@ main .planet_info p {
 
 footer {
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 5rem;
 }
 
 footer a {
@@ -157,12 +170,12 @@ footer .ft_cols a {
 footer .ft_cols {
     justify-content: center;
     border-bottom: 2px solid white;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
 footer .ft_cols section {
-    margin-bottom: 2em;
-    padding: 0 6em;
+    margin-bottom: 2rem;
+    padding: 0 6rem;
     white-space: nowrap;
 }
 
@@ -173,13 +186,13 @@ footer .ft_cols section:nth-of-type(2) {
 
 footer h2 {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
 }
 
 footer ul {
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 1rem;
 }
 
 footer .credits {
@@ -191,7 +204,7 @@ footer .credits {
 /* -------------------------------------------------------------- */
 
 h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
 }
 
 ul {
@@ -204,7 +217,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.2rem;
 }
 
 
@@ -214,12 +227,12 @@ a:hover {
 .asteroid {
     text-transform: uppercase;
     text-align: center;
-    font-size: 20px;
-    margin: 4em 0 2em;
+    font-size: 1.25rem;
+    margin: 4rem 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -234,14 +247,14 @@ a:hover {
 
 .planet_info {
     align-items: center;
-    gap: 10px;
+    gap: 0.8rem;
 }
 
 .planet_info p {
     padding: 5px 15px;
     border-radius: 10px;
     font-weight: 700;
-    filter: drop-shadow(0 4px 4px #000);
+    filter: drop-shadow(0 4px 4px #1B2430);
 }
 
 .planet_info p:last-of-type {
@@ -264,16 +277,9 @@ a:hover {
 
 /* ---------------------------------------------------------------------------- */
 
-
-@media screen and (max-width: 1500px) {
-    main {
-        margin: 0 10% 20px;
-    }
-}
-
 @media screen and (max-width: 1250px) {
     main {
-        margin: 0 5% 20px;
+        margin: 0 5% 1.2rem;
     }
 
     header nav,
@@ -293,9 +299,9 @@ a:hover {
 
 @media screen and (max-width: 950px) {
     header nav a {
-        font-size: 0.9em;
-        padding-left: 0.4em;
-        padding-right: 0.4em;
+        font-size: 0.9rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
     }
 
     header nav {
@@ -304,12 +310,12 @@ a:hover {
     }
 
     .asteroid {
-        margin-top: 2em;
-        margin-bottom: 0.5em;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     footer .ft_cols section {
-        padding: 0 2em;
+        padding: 0 2rem;
     }
 
     footer .ft_cols section:nth-of-type(2) {
@@ -334,52 +340,44 @@ a:hover {
     }
 
     .content>img {
-        padding: 0 2em;
+        padding: 0 2rem;
         max-width: 50%;
         height: auto;
     }
 
     main .content {
-        gap: 1em;
-    }
-
-    header nav a {
-        font-size: 0.8em;
+        gap: 1rem;
     }
 
     footer .ft_cols section {
-        padding: 0 1em;
+        padding: 0 1rem;
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 555px) {
+    header ul {
+        display: none;
+    }
+
     footer .ft_cols {
         flex-direction: column;
-    }
-
-    footer ul {
-        gap: 0.5em;
-    }
-
-    footer h2 {
-        padding-bottom: 0.6em;
-        font-size: 1.2em;
+        gap: 1rem;
     }
 
     footer .ft_cols section {
-        margin-bottom: 1em;
-    }
-
-    h1 {
-        font-size: 2.5em;
+        margin-bottom: 1rem;
     }
 }
 
 @media screen and (max-width: 450px) {
+    header h1 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     header nav a {
-        font-size: 0.7em;
-        padding-left: 0.3em;
-        padding-right: 0.3em;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
     }
 
     header nav {
@@ -387,20 +385,12 @@ a:hover {
     }
 
     main .content p {
-        font-size: 1em;
-        line-height: 1em;
+        font-size: 1rem;
+        line-height: 1rem;
     }
 
     main .planet_info p {
         letter-spacing: normal;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    footer h2 {
-        font-size: 1.1em;
     }
 
     .content>img {
@@ -410,16 +400,7 @@ a:hover {
 
 @media screen and (max-width:390px) {
     header nav a {
-        font-size: 0.6em;
-        padding-left: 0.2em;
-        padding-right: 0.2em;
-    }
-
-    h1 {
-        font-size: 1.75em;
-    }
-
-    footer h2 {
-        font-size: 1em;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
     }
 }
