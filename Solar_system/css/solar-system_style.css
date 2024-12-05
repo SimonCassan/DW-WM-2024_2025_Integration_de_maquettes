@@ -92,7 +92,6 @@ header nav ul {
 main {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.2rem;
 }
 
 main .content {
@@ -271,7 +270,7 @@ a:hover {
 
 @media screen and (max-width: 1250px) {
     main {
-        margin: 0 5% 1.2rem;
+        margin: 0 1.5em 0;
     }
 
     header nav,
