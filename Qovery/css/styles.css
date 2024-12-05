@@ -28,7 +28,9 @@
     box-sizing: border-box;
 }
 
-
+html {
+    font-size: 16px;
+}
 
 header {
     display: flex;
@@ -52,13 +54,13 @@ header .header_logo h1 {
 }
 
 header h2 {
-    font-size: 46px;
+    font-size: 2.9rem;
     color: white;
 }
 
 header p.header_subtitle {
     font-family: "HK Grotesk SemiBold", sans-serif;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 header .header_content {
@@ -132,7 +134,7 @@ main img {
 
 main h2 {
     margin-bottom: 1em;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 main h2,
@@ -141,7 +143,7 @@ main article p {
 }
 
 main article p {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 main .card_socials {
@@ -171,7 +173,7 @@ main .main_md2 section {
 
 main .main_md2 section h3 {
     margin: 1.2em 0;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 main .main_md2 section p:nth-of-type(2) {
@@ -240,9 +242,14 @@ footer .ft_logo {
     margin-bottom: 3em;
 }
 
+footer .ft_logo img {
+    margin-left: -5px;
+}
+
 footer .ft_legal ul {
     margin-top: 3em;
     padding-top: 1em;
+    text-align: center;
     border-top: 1px solid grey;
     display: flex;
     justify-content: center;
@@ -340,7 +347,7 @@ ul {
     padding: 12px 25px;
     border-radius: 0.3em;
     font-family: "SFUIText-SemiBold", sans-serif;
-    font-size: 14px;
+    font-size: 0.9rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
