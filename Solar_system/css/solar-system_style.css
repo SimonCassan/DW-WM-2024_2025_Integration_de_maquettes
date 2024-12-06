@@ -89,6 +89,10 @@ header nav ul {
     justify-content: space-between;
 }
 
+
+/* ----------------------------------------------------------------------------------- */
+
+
 main {
     flex-direction: column;
     align-items: center;
@@ -96,14 +100,13 @@ main {
 
 main .content {
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     padding-top: 3rem;
 }
 
 main .content>div {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
 }
 
 main .content h2 {
@@ -133,6 +136,8 @@ main .planet_info p {
     letter-spacing: 3px;
 }
 
+
+/* ----------------------------------------------------------------------------------- */
 
 
 footer {
@@ -191,8 +196,8 @@ footer .credits {
 }
 
 
-
 /* -------------------------------------------------------------- */
+
 
 h1 {
     font-size: 2.5rem;
@@ -238,7 +243,7 @@ a:hover {
 
 .planet_info {
     align-items: center;
-    gap: 0.8rem;
+    gap: 2rem;
 }
 
 .planet_info p {
@@ -266,7 +271,9 @@ a:hover {
     color: white;
 }
 
+
 /* ---------------------------------------------------------------------------- */
+
 
 @media screen and (max-width: 1250px) {
     main {
@@ -310,8 +317,12 @@ a:hover {
         flex-direction: column;
     }
 
-    .planet_info {
-        justify-content: center;
+    main .content {
+        gap: 0.8rem;
+    }
+
+    main .content>div {
+        gap: 0.5rem;
     }
 
     main .content h2 {
@@ -323,8 +334,8 @@ a:hover {
         height: auto;
     }
 
-    main .content {
-        gap: 1rem;
+    .planet_info {
+        justify-content: center;
     }
 
     footer .ft_cols section {
@@ -360,6 +371,10 @@ a:hover {
 
     main .planet_info p {
         letter-spacing: normal;
+    }
+
+    .planet_info {
+        gap: 1.5rem;
     }
 
     .content>img {
