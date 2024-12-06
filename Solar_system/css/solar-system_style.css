@@ -66,14 +66,17 @@ header {
 }
 
 header h1 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url('../src/ressources/planet_background.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    padding: 7.5rem 0;
+    height: 20rem;
     clip-path: circle(45% at 50% 50%);
+    font-size: 2.5rem;
 }
 
 header nav {
@@ -99,10 +102,6 @@ header nav .logo {
 
 header nav ul {
     justify-content: space-between;
-}
-
-header h1 {
-    font-size: 2.5rem;
 }
 
 
@@ -292,13 +291,14 @@ a:active {
 }
 
 @media screen and (max-width: 1250px) {
-    main {
-        margin: 0 1.5em 0;
-    }
 
     header nav,
     header nav ul {
         justify-content: center;
+    }
+
+    main {
+        margin: 0 1.5em 0;
     }
 
     footer .ft_cols section {
@@ -311,7 +311,6 @@ a:active {
 
     header h1 {
         clip-path: none;
-        padding: 5rem 0;
     }
 
     main .asteroid {
@@ -329,6 +328,10 @@ a:active {
 }
 
 @media screen and (max-width: 760px) {
+    header h1 {
+        height: 10rem;
+    }
+
     header nav a {
         padding-left: 0.4rem;
         padding-right: 0.4rem;
@@ -382,8 +385,7 @@ a:active {
 
 @media screen and (max-width: 450px) {
     header h1 {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        font-size: 1.8rem;
     }
 
     main .content>img {
