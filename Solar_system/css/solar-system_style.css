@@ -3,7 +3,7 @@
 /* --------------- main ---------------  */
 /* --------------- footer ---------------*/
 /* ----------Generic elements------------- */
-
+/* --------------@media-------------- */
 
 
 * {
@@ -401,7 +401,10 @@ a:active {
     }
 
     main .content p {
-        font-size: 1rem;
-        line-height: 1rem;
+        line-height: 1.5rem;
+    }
+
+    main .asteroid {
+        gap: 0.6rem;
     }
 }
