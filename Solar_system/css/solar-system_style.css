@@ -79,7 +79,8 @@ header nav a {
     padding: 1rem 0.75rem;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:active {
     background-color: #242f3f;
 }
 
@@ -262,7 +263,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:active {
     text-decoration: underline;
     text-underline-offset: 0.2rem;
 }
