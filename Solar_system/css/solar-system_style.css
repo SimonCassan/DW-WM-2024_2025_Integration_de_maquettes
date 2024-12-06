@@ -25,12 +25,14 @@ footer {
 
 main,
 main .content,
+main .content>div,
 nav,
 .footer,
 footer,
 .ft_cols,
 .planet_info,
-ul {
+ul,
+.asteroid {
     display: flex;
 }
 
@@ -64,6 +66,14 @@ header h1 {
     clip-path: circle(45% at 50% 50%);
 }
 
+header nav {
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 header nav a {
     color: #D9D9D9;
     padding: 1rem 0.75rem;
@@ -73,13 +83,6 @@ header nav a:hover {
     background-color: #242f3f;
 }
 
-header nav {
-    justify-content: space-between;
-    align-items: center;
-    white-space: nowrap;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
 
 header nav .logo {
     width: 20px;
@@ -87,6 +90,10 @@ header nav .logo {
 
 header nav ul {
     justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2.5rem;
 }
 
 
@@ -101,11 +108,14 @@ main {
 main .content {
     align-items: center;
     gap: 4rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
+}
+
+main .content:nth-of-type(2n) {
+    flex-direction: row-reverse;
 }
 
 main .content>div {
-    display: flex;
     flex-direction: column;
 }
 
@@ -124,16 +134,59 @@ main .content p {
     line-height: 1.9rem;
 }
 
-main .content:nth-of-type(2n) {
-    flex-direction: row-reverse;
-}
-
-main .asteroid h2 {
-    font-size: 1.9rem;
+main .planet_info {
+    align-items: center;
+    gap: 2rem;
 }
 
 main .planet_info p {
     letter-spacing: 3px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px #1B2430);
+}
+
+main .planet_info p:last-of-type {
+    background-color: #1B2430;
+}
+
+main .type_t {
+    background-color: #D6D5A8;
+    color: #1B2430;
+}
+
+main .type_g {
+    background: linear-gradient(#816797, #51557E);
+}
+
+main .type_g,
+main .discovery_date {
+    color: white;
+}
+
+main .asteroid {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 5rem 0 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+main .asteroid::before,
+main .asteroid::after {
+    content: "";
+    flex: 1;
+    display: block;
+    height: 3px;
+    background: #000;
+}
+
+main .asteroid h2 {
+    font-size: 1.9rem;
 }
 
 
@@ -183,6 +236,8 @@ footer .ft_cols a {
 footer h2 {
     text-align: center;
     padding-bottom: 1.7rem;
+    font-family: Roboto;
+    font-size: 1.88rem;
 }
 
 footer ul {
@@ -199,10 +254,6 @@ footer .credits {
 /* -------------------------------------------------------------- */
 
 
-h1 {
-    font-size: 2.5rem;
-}
-
 ul {
     list-style-type: none;
 }
@@ -214,61 +265,6 @@ a {
 a:hover {
     text-decoration: underline;
     text-underline-offset: 0.2rem;
-}
-
-
-/* ----------------------------------------------- */
-
-
-.asteroid {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.25rem;
-    margin: 5rem 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-.asteroid::before,
-.asteroid::after {
-    content: "";
-    flex: 1;
-    display: block;
-    height: 3px;
-    background: #000;
-}
-
-.planet_info {
-    align-items: center;
-    gap: 2rem;
-}
-
-.planet_info p {
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-weight: 700;
-    filter: drop-shadow(0 4px 4px #1B2430);
-}
-
-.planet_info p:last-of-type {
-    background-color: #1B2430;
-}
-
-.type_t {
-    background-color: #D6D5A8;
-    color: #1B2430;
-}
-
-.type_g {
-    background: linear-gradient(#816797, #51557E);
-}
-
-.type_g,
-.discovery_date {
-    color: white;
 }
 
 
@@ -291,9 +287,9 @@ a:hover {
 }
 
 @media screen and (max-width: 950px) {
-    .asteroid {
+    main .asteroid {
         margin-top: 2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
     }
 
     footer .ft_cols section {
@@ -304,7 +300,6 @@ a:hover {
         border: none;
     }
 }
-
 
 @media screen and (max-width: 760px) {
     header nav a {
@@ -329,12 +324,12 @@ a:hover {
         text-align: center;
     }
 
-    .content>img {
+    main .content>img {
         max-width: 50%;
         height: auto;
     }
 
-    .planet_info {
+    main .planet_info {
         justify-content: center;
     }
 
@@ -364,20 +359,20 @@ a:hover {
         padding-right: 1rem;
     }
 
-    main .content p {
-        font-size: 1rem;
-        line-height: 1rem;
+    main .content>img {
+        max-width: 55%;
+    }
+
+    main .planet_info {
+        gap: 1.5rem;
     }
 
     main .planet_info p {
         letter-spacing: normal;
     }
 
-    .planet_info {
-        gap: 1.5rem;
-    }
-
-    .content>img {
-        max-width: 55%;
+    main .content p {
+        font-size: 1rem;
+        line-height: 1rem;
     }
 }
