@@ -301,12 +301,19 @@ a:active {
         justify-content: center;
     }
 
-    header h1 {
-        clip-path: none;
+    footer .ft_cols section {
+        padding: 0 4rem;
     }
+
 }
 
 @media screen and (max-width: 950px) {
+
+    header h1 {
+        clip-path: none;
+        padding: 5rem 0;
+    }
+
     main .asteroid {
         margin-top: 2rem;
         margin-bottom: 0.8rem;
