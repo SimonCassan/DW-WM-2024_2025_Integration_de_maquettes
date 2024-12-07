@@ -264,7 +264,10 @@ a {
     text-decoration: none;
 }
 
+
 /* ---------------------------------------------------------------------------- */
+
+
 @media(hover: none) {
     a:active {
         text-decoration: underline;
@@ -283,6 +286,8 @@ a {
         background-color: #242f3f;
     }
 }
+
+
 
 @media screen and (max-width: 1250px) {
     main {
