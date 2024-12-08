@@ -120,6 +120,8 @@ main .content {
     align-items: center;
     gap: 4rem;
     padding-top: 2.2rem;
+    /* offset for sticky navbar */
+    scroll-margin-top: 1.5rem;
 }
 
 main .content:nth-of-type(2n) {
@@ -375,6 +377,10 @@ a {
 
     header ul {
         display: none;
+    }
+
+    main .content {
+        scroll-margin-top: 0;
     }
 
     footer .ft_cols {
