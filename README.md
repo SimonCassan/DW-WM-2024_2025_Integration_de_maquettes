@@ -6,7 +6,7 @@ This project is a fully responsive webpage dedicated to presenting the planets o
 
 - **Responsive Design:** The webpage is designed to look great on all devices, from mobile phones to desktops.
 - **Sticky Navbar:** A sticky navigation bar allows users to easily navigate through the page.
-- **Planet Descriptions:** Each planet is introduced with a short, placeholder paragraph.
+- **Planet Descriptions:** Each planet is introduced with a short, informative paragraph.
 - **Illustrations:** Basic images accompany each description to provide visual appeal.
 
 ## Technologies Used
