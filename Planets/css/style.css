@@ -1,5 +1,6 @@
 /* ---------------------------------------- */
 /* --------------- header --------------- */
+/* ---------------- h1 ------------------- */
 /* --------------- main ---------------  */
 /* --------------- footer ---------------*/
 /* ----------Generic elements------------- */
@@ -47,7 +48,6 @@ footer {
     color: #fff;
 }
 
-header nav,
 main,
 .footer {
     max-width: 1200px;
@@ -55,34 +55,16 @@ main,
 }
 
 
-/* ----------------------------------------------------------------------------------- */
+/* --------------------------------header---------------------------------- */
 
-
-header {
-    margin-bottom: 1.8rem;
-}
-
-header h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    background-image: url('../src/ressources/planet_background.webp');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    height: 320px;
-    clip-path: circle(45% at 50% 50%);
-    font-size: 2.5rem;
-}
 
 header nav {
     justify-content: space-around;
     align-items: center;
     white-space: nowrap;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    max-width: 100%;
+    padding: 1rem 0;
+    background-color: #1B2430;
 }
 
 header nav a {
@@ -98,8 +80,35 @@ header nav ul {
     justify-content: space-between;
 }
 
+header#navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
 
-/* ----------------------------------------------------------------------------------- */
+
+/* ---------------------------------h1------------------------------------- */
+
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: url('../src/ressources/planet_background.webp') no-repeat fixed top / cover;
+    height: 320px;
+    clip-path: circle(45% at 50% 50%);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.background-h1 {
+    background-color: #1B2430;
+}
+
+
+/* ---------------------------------main------------------------------------- */
 
 
 main {
@@ -192,7 +201,7 @@ main .asteroid h2 {
 }
 
 
-/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------footer----------------------------------- */
 
 
 footer {
@@ -263,7 +272,7 @@ a {
 }
 
 
-/* ---------------------------------------------------------------------------- */
+/* ---------------------------@media------------------------------- */
 
 
 @media(hover: none) {
@@ -300,7 +309,7 @@ a {
 
 @media screen and (max-width: 950px) {
 
-    header h1 {
+    h1 {
         clip-path: none;
     }
 
@@ -319,7 +328,7 @@ a {
 }
 
 @media screen and (max-width: 760px) {
-    header h1 {
+    h1 {
         height: 160px;
     }
 
@@ -360,6 +369,10 @@ a {
 }
 
 @media screen and (max-width: 650px) {
+    header#navbar-sticky {
+        position: initial;
+    }
+
     header ul {
         display: none;
     }
