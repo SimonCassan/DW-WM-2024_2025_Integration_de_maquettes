@@ -20,7 +20,7 @@ main {
 
 /* ------------------Generic elements--------------------------- */
 .background-h1 {
-    background-image: url('../src/img/background.jpg');
+    background-image: url('../src/img/background.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
