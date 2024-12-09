@@ -7,6 +7,7 @@ Discover **TechnoRaton**, a high-tech blog concept animated by a raccoon passion
 - **Responsive Design:** The prototype adapts seamlessly to all screen sizes, from mobile devices to desktops, using Flexbox for layout.
 - **Sticky Navbar:** A fixed navigation bar for smooth browsing in desktop view.
 - **Clean Visual Layout:** A minimalist and modern design to highlight the content effectively.
+- - **Mobile-First Design:** Developed with a mobile-first approach for optimal performance and usability on smaller devices.
 
 ## Technologies Used
 
