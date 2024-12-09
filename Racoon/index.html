@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Squelette d'un site web">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Découvrez TechnoRaton, le blog high-tech animé par un raton-laveur passionné : actualités, astuces, tests et innovations pour rester connecté au futur !">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/png">
-    <title>Racoon</title>
+    <title>TechnoRaton</title>
 </head>
 
 <body>
-    <header>
+    <header id="navbar">
         <nav>
             <ul>
                 <li><a href="#" aria-label="ne va nulle part">Accueil</a></li>
@@ -26,8 +32,10 @@
                     title="Twitter"><img src="./src/img/twitter_icon.svg" alt="Icône de twitter"></a>
             </div>
         </nav>
-        <h1>Mon site générique</h1>
     </header>
+    <div class="background-h1">
+        <h1>TechnoRaton</h1>
+    </div>
     <div class="container">
         <main>
             <article>
@@ -76,7 +84,7 @@
             </article>
         </main>
         <footer>
-            <div>
+            <div class="footer-category">
                 <h2>Catégories</h2>
                 <ul>
                     <li><a href="#" aria-label="ne mêne à rien">High-tech</a></li>
@@ -87,7 +95,8 @@
                     <li><a href="#" aria-label="ne mêne à rien">Bonnes pratiques</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-category footer-divider"></div>
+            <div class="footer-category">
                 <h2>Catégories</h2>
                 <ul>
                     <li><a href="#" aria-label="ne mêne à rien">High-tech</a></li>
