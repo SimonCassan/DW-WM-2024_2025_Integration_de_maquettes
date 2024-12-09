@@ -22,3 +22,7 @@ The prototype is live and accessible online via GitHub Pages:
 
 [![Mobile View Thumbnail](./screenshots/mobile-view-thumb.png)](./screenshots/mobile-view.png)
 [![Desktop View Thumbnail](./screenshots/desktop-view-thumb.png)](./screenshots/desktop-view.png)
+
+## Known Issues
+
+- **Low Contrast:** The color palette used in the prototype may result in low contrast for some text and UI elements, which could impact accessibility for users with visual impairments.
