@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -21,18 +19,21 @@ main {
 }
 
 /* ------------------Generic elements--------------------------- */
-
-h1 {
-    color: white;
-    text-align: center;
+.background-h1 {
     background-image: url('../src/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 160px;
-    display: flex;
+    position: relative;
+}
+
+h1 {
+    color: #fff;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
     font-weight: 900;
-    padding-left: 1.5rem;
 }
 
 h1,
@@ -164,11 +165,14 @@ footer .footer-category ul {
     gap: 1.2rem;
 }
 
+
 /* --------------------------------------------------------------------------------------- */
+
 
 @media (hover:none) {
     a:active {
-        transform: scale(0.8);
+        text-decoration: underline;
+        text-underline-offset: 0.2rem;
     }
 }
 
@@ -183,6 +187,9 @@ footer .footer-category ul {
         transform: scale(0.8);
     }
 }
+
+
+/* --------------------------------------------------------------------------------------- */
 
 
 @media screen and (min-width:750px) {
@@ -272,7 +279,7 @@ footer .footer-category ul {
 
 @media screen and (min-width:1000px) {
     main {
-        margin: 1.4rem auto;
+        margin: 3rem auto;
     }
 
     main .article_h2 h2 {
