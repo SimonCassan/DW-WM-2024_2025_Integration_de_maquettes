@@ -193,6 +193,10 @@ footer .footer-category ul {
 
 
 @media screen and (min-width:750px) {
+    a {
+        font-size: 1.063rem;
+    }
+
     header#navbar {
         position: sticky;
         top: 0;
@@ -224,7 +228,7 @@ footer .footer-category ul {
         position: relative;
         padding-left: 22rem;
         align-items: normal;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         /* racoon image height */
         min-height: 200px;
     }
@@ -246,7 +250,8 @@ footer .footer-category ul {
 
     main article img {
         position: absolute;
-        top: 10%;
+        top: 50%;
+        transform: translateY(-50%);
         left: 1rem;
         max-width: initial;
         max-height: initial;
@@ -285,16 +290,16 @@ footer .footer-category ul {
     main .article_h2 h2 {
         font-size: 2.25rem;
     }
-
-    main article img {
-        top: 0;
-    }
 }
 
 
 @media screen and (min-width:1280px) {
     .container {
         display: flex;
+    }
+
+    .background-h1 {
+        height: 250px;
     }
 
     footer {
