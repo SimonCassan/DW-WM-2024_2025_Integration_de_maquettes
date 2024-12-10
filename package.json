@@ -1,0 +1,23 @@
+{
+  "name": "qovery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "Devdependencies": {
+    "sass": "^1.82.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass -c": "sass --watch ./sass/main.scss ./css/style.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonCassan/Prototypes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonCassan/Prototypes/issues"
+  },
+  "homepage": "https://github.com/SimonCassan/Prototypes#readme",
+  "description": ""
+}

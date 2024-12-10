@@ -1,0 +1,72 @@
+header {
+    background-color: #151B2B;
+    padding: 2rem;
+
+    .header-container {
+        display: flex;
+        position: relative;
+        max-width: 80%;
+        margin: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        .header-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            h1 {
+                color: #A8A8C1;
+                line-height: 2rem;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+
+            .header_block40 {
+                max-width: 40%;
+            }
+
+            .header_text {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .header_text_h2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+
+                    h2 {
+                        font-size: 2.9rem;
+                        font-family: 'Hanken Grotesk';
+                        font-weight: 800;
+                        white-space: nowrap;
+                    }
+                }
+
+                .header-subtitle {
+                    font-family: 'Hanken Grotesk';
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+header header .header_img img {
+    max-width: 100%;
+}
+
+header .card_github {
+    padding: 0 15px;
+}
