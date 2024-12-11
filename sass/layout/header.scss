@@ -4,6 +4,7 @@ header {
 
     .header-container {
         display: flex;
+        justify-content: center;
         position: relative;
         max-width: 80%;
         margin: auto;
@@ -30,6 +31,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
 
     .header-block40 {
         max-width: 40%;

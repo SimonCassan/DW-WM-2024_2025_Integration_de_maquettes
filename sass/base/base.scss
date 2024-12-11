@@ -18,6 +18,23 @@ a {
     cursor: pointer;
 }
 
+main,
+footer ul {
+    a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+
 ul {
     list-style-type: none;
+}
+
+
+.card-github p,
+.btn,
+h2,
+h3 {
+    white-space: nowrap;
 }
