@@ -1,18 +1,27 @@
-body {
-    font-family: sans-serif;
-    background-color: #F9F9FD;
-}
-
 main {
     max-width: 1200px;
     margin: auto;
 }
 
-p {
-    font-family: "SFUIText-Regular";
-}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 70%;
+    margin: auto;
 
-a {
-    text-decoration: none;
-    font-family: "SFUIText-SemiBold";
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 3rem;
+    }
+
+    #main_bg {
+        background-image: url('../src/ressources/bg_usage.png');
+        background-size: cover;
+        background-position: center;
+        height: 160px;
+    }
 }

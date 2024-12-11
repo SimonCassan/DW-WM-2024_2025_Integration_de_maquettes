@@ -1,17 +1,62 @@
+$font-heading: 'Hanken Grotesk';
+$font-maincontent: 'SFUIText-Regular';
+$font-links: 'SFUIText-SemiBold';
+$font-default: 'sans-serif';
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+
 @font-face {
     font-family: "SFUIText-Regular";
     src: url(../src/fonts/SFUIText-Regular.ttf) format("truetype");
-    font-weight: 400;
+    font-weight: $font-weight-regular;
 }
 
 @font-face {
     font-family: "SFUIText-SemiBold";
     src: url(../src/fonts/SFUIText-Semibold.ttf) format("truetype");
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
 }
 
 @font-face {
     font-family: "Hack-Regular";
     src: url(../src/fonts/Hack-Regular.ttf) format("truetype");
-    font-weight: 400;
+    font-weight: $font-weight-regular;
+}
+
+body {
+    font-family: $font-default;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-heading;
+}
+
+h1,
+h2 {
+    font-weight: $font-weight-extrabold;
+}
+
+h3 {
+    font-weight: $font-weight-bold;
+}
+
+p,
+li {
+    font-family: $font-maincontent;
+}
+
+a,
+footer h2,
+footer h3 {
+    font-family: $font-links;
+}
+
+.header-content .header-subtitle {
+    font-family: $font-heading;
+    font-weight: $font-weight-semibold;
 }

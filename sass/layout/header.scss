@@ -12,7 +12,6 @@ header {
     }
 }
 
-
 .header-logo {
     position: absolute;
     top: 0;
@@ -27,52 +26,53 @@ header {
     }
 }
 
-
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
 
-    .header_block40 {
+    .header-block40 {
         max-width: 40%;
     }
 
     .header-subtitle {
-        font-family: 'Hanken Grotesk';
-        font-weight: 600;
         font-size: 1.5rem;
     }
 
-    .card_github {
+    .card-github {
         padding: 0 15px;
     }
 
-    .header_img img {
+    .header-img img {
         max-width: 100%;
     }
 }
 
 
 // ---------------------------------------------------
-.header_text {
+.header-text {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.header_text_h2 {
+.header-text-h2 {
     display: flex;
     align-items: center;
     gap: 1em;
 
     h2 {
         font-size: 2.9rem;
-        font-family: 'Hanken Grotesk';
-        font-weight: 800;
         white-space: nowrap;
     }
 }
 
 // -------------------------------------------------
+
+header {
+
+    h2,
+    p {
+        color: #fff;
+    }
+}

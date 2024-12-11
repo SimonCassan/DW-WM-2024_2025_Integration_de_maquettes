@@ -1,0 +1,65 @@
+.card-github {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 28px;
+    gap: 0.3rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgrey;
+    width: fit-content;
+
+    p {
+        color: black;
+    }
+
+    span {
+        padding-left: 0.3rem;
+        border-left: 2px solid lightgrey;
+    }
+}
+
+
+.btn {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    img {
+        margin-right: 0.2rem;
+    }
+
+    a {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            text-decoration: none;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.btn-github {
+    background-color: #454658;
+}
+
+.btn-discord {
+    background-color: #6578C0;
+}
+
+
+main .btn-github:hover {
+    box-shadow: 0 5px 5px #585970;
+}
+
+
+main .btn-discord:hover {
+    box-shadow: 0 5px 5px #6c80cc;
+}
