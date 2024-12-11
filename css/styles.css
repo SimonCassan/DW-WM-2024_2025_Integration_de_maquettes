@@ -120,6 +120,7 @@ main .article_h2 h2 {
 main .article_h2 p {
     font-weight: 100;
     font-size: 0.85rem;
+    padding: 0 0.5rem;
 }
 
 main article img {
@@ -246,6 +247,7 @@ footer .footer-category ul {
 
     main .article_h2 p {
         font-size: 1rem;
+        padding: 0;
     }
 
     main article img {
