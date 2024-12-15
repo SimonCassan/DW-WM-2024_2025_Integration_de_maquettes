@@ -56,7 +56,8 @@ ul {
     list-style-type: none;
 }
 
-.link:link {
+.link:link,
+.link:visited {
     text-decoration: none;
     color: var(--tertiary-color);
     transition: color 0.3s ease;
@@ -92,7 +93,8 @@ header .logo-link {
     transition: transform 0.3s;
 }
 
-header .current-page:link {
+header .current-page:link,
+header .current-page:visited {
     color: black;
 }
 
