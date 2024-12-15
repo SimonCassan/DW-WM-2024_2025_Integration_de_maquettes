@@ -1,4 +1,6 @@
-* {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -7,6 +9,8 @@
 :root {
     --primary-color: #FBFBFB;
     --secondary-color: #C4C4C4;
+    --tertiary-color: #9F9F9F;
+    --darker-tertiary-color: color-mix(in srgb, var(--tertiary-color) 70%, black 30%);
 }
 
 html {
@@ -59,11 +63,12 @@ ul {
     list-style-type: none;
 }
 
-a {
+.link:link {
     text-decoration: none;
-    color: #9F9F9F;
-    transition: transform 0.3s;
+    color: var(--tertiary-color);
+    transition: color 0.3s ease;
 }
+
 
 /* --------------------------------------------------------------------------------------- */
 
@@ -73,33 +78,42 @@ a {
 }
 
 
-
 /* --------------------------------------------------------------------------------------- */
+
+
 header nav {
     padding: 1.5rem 0.5rem;
     max-width: 1600px;
     margin: auto;
 }
 
-header nav a {
-    font-weight: 500;
-}
-
-header nav ul {
+header ul {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1.5rem;
 }
 
-header nav .logo {
+header .link:link {
+    font-weight: 500;
+}
+
+header .logo {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-header nav .active {
+header .logo-link {
+    transition: transform 0.3s;
+}
+
+header .current-page:link {
     color: black;
 }
+
+
+/* --------------------------------------------------------------------------------------- */
+
 
 main {
     margin: 1.4rem 1rem;
@@ -162,6 +176,11 @@ footer {
     background: linear-gradient(var(--secondary-color), var(--primary-color) 6%, var(--primary-color));
 }
 
+footer .link {
+    display: inline-block;
+    width: fit-content;
+}
+
 footer .footer-divider {
     --border-style: 1px solid var(--secondary-color);
     border-bottom: var(--border-style);
@@ -187,22 +206,39 @@ footer .footer-category ul {
 
 
 @media (hover:none) {
-    a:active {
+    .link:active {
         text-decoration: underline;
-        text-underline-offset: 0.2rem;
+        text-underline-offset: 0.3rem;
     }
 }
 
 @media (hover:hover) {
-    a:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.2rem;
+    .link:hover {
+        color: var(--darker-tertiary-color)
+    }
+
+    .link::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: 0.3rem;
+        background: var(--darker-tertiary-color);
+        transition: width 0.3s ease;
+    }
+
+    .link:hover::after {
+        width: 100%;
+    }
+
+    header .logo-link:hover {
         transform: scale(1.8);
     }
 
-    a:active {
+    header .logo-link:active {
         transform: scale(0.8);
     }
+
 }
 
 
@@ -210,7 +246,7 @@ footer .footer-category ul {
 
 
 @media screen and (min-width:750px) {
-    a {
+    .link:link {
         font-size: 1.063rem;
     }
 
@@ -227,13 +263,13 @@ footer .footer-category ul {
         padding: 2rem 2rem;
     }
 
-    header nav ul {
+    header ul {
         justify-content: initial;
         margin-bottom: 0;
     }
 
-    header nav ul,
-    header nav .logo {
+    header ul,
+    header .logo {
         gap: 2rem;
     }
 
