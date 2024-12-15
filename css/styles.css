@@ -173,6 +173,9 @@ footer {
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    background: var(--primary-color);
+    background: -moz-linear-gradient(var(--secondary-color), var(--primary-color) 6%, var(--primary-color));
+    background: -webkit-linear-gradient(var(--secondary-color), var(--primary-color) 6%, var(--primary-color));
     background: linear-gradient(var(--secondary-color), var(--primary-color) 6%, var(--primary-color));
 }
 
@@ -214,7 +217,7 @@ footer .footer-category ul {
 
 @media (hover:hover) {
     .link:hover {
-        color: var(--darker-tertiary-color)
+        color: var(--darker-tertiary-color);
     }
 
     .link::after {
@@ -253,6 +256,9 @@ footer .footer-category ul {
     header#navbar {
         position: sticky;
         top: 0;
+        background: var(--primary-color);
+        background: -moz-linear-gradient(var(--primary-color), var(--primary-color) 95%, var(--secondary-color));
+        background: -webkit-linear-gradient(var(--primary-color), var(--primary-color) 95%, var(--secondary-color));
         background: linear-gradient(var(--primary-color), var(--primary-color) 95%, var(--secondary-color));
         z-index: 10;
     }
