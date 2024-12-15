@@ -1,6 +1,6 @@
 $font-heading: 'Hanken Grotesk';
-$font-maincontent: 'SFUIText-Regular';
-$font-links: 'SFUIText-SemiBold';
+$font-primary: 'SFUIText-Regular';
+$font-secondary: 'SFUIText-SemiBold';
 $font-default: 'sans-serif';
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
@@ -26,6 +26,10 @@ $font-weight-extrabold: 800;
     font-weight: $font-weight-regular;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
     font-family: $font-default;
 }
@@ -47,14 +51,14 @@ h3 {
 
 p,
 li {
-    font-family: $font-maincontent;
+    font-family: $font-primary;
 }
 
 a,
 footer h2,
 footer h3,
 footer p {
-    font-family: $font-links;
+    font-family: $font-secondary;
 }
 
 .header-content .header-subtitle {
