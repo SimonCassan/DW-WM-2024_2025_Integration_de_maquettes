@@ -1,5 +1,10 @@
+html {
+    font-size: 100%;
+}
+
 body {
     background-color: #F9F9FD;
+    box-sizing: border-box;
 }
 
 h2,
@@ -26,11 +31,9 @@ footer ul {
     }
 }
 
-
 ul {
     list-style-type: none;
 }
-
 
 .card-github p,
 .btn,

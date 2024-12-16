@@ -1,4 +1,4 @@
-$font-heading: 'Hanken Grotesk';
+$font-header: 'Hanken Grotesk';
 $font-maincontent: 'SFUIText-Regular';
 $font-links: 'SFUIText-SemiBold';
 $font-default: 'sans-serif';
@@ -33,7 +33,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: $font-heading;
+    font-family: $font-header;
 }
 
 h1,
@@ -58,6 +58,6 @@ footer p {
 }
 
 .header-content .header-subtitle {
-    font-family: $font-heading;
+    font-family: $font-header;
     font-weight: $font-weight-semibold;
 }
