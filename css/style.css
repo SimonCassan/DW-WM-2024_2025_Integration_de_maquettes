@@ -273,7 +273,8 @@ footer .footer-category ul {
 
     main article {
         position: relative;
-        padding-left: 22rem;
+        /* width of racoon img + some padding */
+        padding-left: 350px;
         align-items: normal;
         margin-bottom: 4rem;
         /* racoon image height */
