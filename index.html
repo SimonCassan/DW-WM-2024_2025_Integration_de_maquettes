@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./src/icons/logo-cube.svg" type="image/svg">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <title>Qovery</title>
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -22,12 +24,9 @@
         <div class="header-text header-block40">
           <div class="header-text-h2">
             <h2>Qovery Engine</h2>
-            <div class="card-github">
-              <a class="card-github-link" href="#" title="Github" target="_blank"><img src="./src/icons/github.svg"
-                  width="20" height="20" alt="logo GitHub">
-                <p>Star <span>12</span></p>
-              </a>
-            </div>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=SimonCassan&repo=Prototypes&type=star&count=true&size=large"
+              frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
           </div>
           <p class="header-subtitle">Abstraction layer to deploy microservices applications on any Cloud provider.</p>
           <p>Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP,
@@ -58,7 +57,36 @@
         <h2>Usage</h2>
         <p>Initialize EKS (AWS Kubernetes) and ECR (AWS container registry) on AWS</p>
       </div>
-      <div><img src="./src/ressources/QV_usage.jpg" alt=""></div>
+      <pre><svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="26" rx="3" fill="#5856D6"/>
+        <path d="M10.7949 9.97461H12.3301C13.209 9.97461 13.7598 10.4785 13.7598 11.2812C13.7598 12.0957 13.2383 12.5762 12.3477 12.5762H10.7949V9.97461ZM10.7949 13.9355H12.2422L13.8184 17H15.8223L14.041 13.6602C15.0137 13.2734 15.5762 12.3359 15.5762 11.2578C15.5762 9.57617 14.4336 8.54492 12.5762 8.54492H9.02539V17H10.7949V13.9355ZM19.1445 8.54492H17.375V14.082C17.375 15.957 18.752 17.2168 20.9141 17.2168C23.082 17.2168 24.459 15.957 24.459 14.082V8.54492H22.6895V13.9004C22.6895 14.9668 22.0508 15.6465 20.9141 15.6465C19.7832 15.6465 19.1445 14.9668 19.1445 13.9004V8.54492ZM26.1406 14.6504C26.2051 16.2266 27.5117 17.2168 29.5273 17.2168C31.6484 17.2168 32.9551 16.1738 32.9551 14.4688C32.9551 13.1562 32.2227 12.4238 30.5234 12.0664L29.5039 11.8496C28.5137 11.6387 28.1094 11.3398 28.1094 10.8184C28.1094 10.1738 28.6953 9.76367 29.5801 9.76367C30.4355 9.76367 31.0566 10.209 31.1387 10.877H32.8027C32.75 9.37109 31.4316 8.32812 29.5684 8.32812C27.6172 8.32812 26.334 9.37695 26.334 10.9707C26.334 12.2598 27.0898 13.0625 28.6309 13.3848L29.7324 13.6191C30.7695 13.8418 31.1914 14.1523 31.1914 14.6914C31.1914 15.3301 30.541 15.7754 29.6211 15.7754C28.625 15.7754 27.9336 15.3359 27.8516 14.6504H26.1406ZM38.4512 17V10.0566H40.9883V8.54492H34.1445V10.0566H36.6816V17H38.4512Z" fill="white"/>
+        </svg>
+        <code>
+<span class="code-animation"><span class="code-indigo">let</span> engine <span class="code-purple">= </span>Engine::new(</span>
+    <span class="code-animation">context, <span class="code-gray">// parameters</span></span>
+    <span class="code-animation">local_docker, <span class="code-gray">// initialize Docker as a Build Platform</span></span>
+    <span class="code-animation">ecr, <span class="code-gray">// initialize Elastic Container Registry</span></span>
+    <span class="code-animation">aws, <span class="code-gray">// initialize AWS account</span></span>
+    <span class="code-animation">cloudflare, <span class="code-gray">// initialize Cloudflare as DNS Nameservers</span></span>
+<span class="code-animation">);</span>
+
+<span class="code-animation"><span class="code-indigo">let</span> session <span class="code-purple">= </span><span class="code-indigo">match</span> engine.<span class="code-orange">session()</span> {</span>
+    <span class="code-animation"><span class="code-aqua">Ok</span>(session) <span class="code-purple">=></span> session, <span class="code-gray">// get the session</span></span>
+    <span class="code-animation"><span class="code-aqua">Err</span>(config_error) <span class="code-purple">=></span> <span class="code-aqua">panic!</span>("<span class="code-indigo">configuration error {:?}</span>", config_error),</span>
+<span class="code-animation">};
+
+<span class="code-animation"><span class="code-indigo">let mut</span> tx <span class="code-purple">= </span>session.<span class="code-orange">transaction()</span>;</span>
+
+<span class="code-animation"><span class="code-gray">// create EKS (AWS managed Kubernetes cluster)</span></span>
+<span class="code-animation">tx.<span class="code-orange">create_kubernetes</span>(&eks);</span>
+
+<span class="code-animation"><span class="code-gray">// create the infrastructure and wait for the result</span></span>
+<span class="code-animation"><span class="code-indigo">match</span> tx.<span class="code-orange">commit()</span> {</span> 
+    <span class="code-animation">TransactionResult::<span class="code-aqua">Ok</span> <span class="code-purple">=></span> <span class="code-aqua">println!</span>("<span class="code-indigo">OK</span>"),</span>
+    <span class="code-animation">TransactionResult::<span class="code-orange">Rollback</span>(commit_err) <span class="code-purple">=></span> println!("<span class="code-indigo">ERROR but rollback OK</span>"),</span> 
+    <span class="code-animation">TransactionResult::<span class="code-orange">UnrecoverableError</span>(commit_err, rollback_err) <span class="code-purple">=></span> println!("<span class="code-indigo">FATAL ERROR</span>")</span>
+<span class="code-animation">};</span>
+</code></pre>
     </article>
     <div class="btn"><a class="btn-github" href="#" target="_blank"
         aria-label="ouvre dans un nouvel onglet notre page Qovery sur Github"><img src="./src/icons/github-white.svg"
@@ -72,7 +100,7 @@
         <p>Qovery Engine empowers you to deploy complex applications, such as a backend, a frontend, and a database in
           a very simple way.</p>
         <p>Servers, networking, security, all is done by the Engine for you.</p>
-        <div class="main-more"><a href="#">See more</a></div>
+        <div class="block-more"><a href="#">See more</a></div>
       </section>
       <section>
         <img src="./src/ressources/QV_resiliency.png" alt="">
@@ -81,7 +109,7 @@
           built with resiliency in mind.</p>
         <p>A transactional engine inspired by what is provided into ACID databases has been developed at the heart of
           the product to rollback on a consistent and working application version when something goes wrong.</p>
-        <div class="main-more"><a href="#">See more</a></div>
+        <div class="block-more"><a href="#">See more</a></div>
       </section>
     </div>
     <div class="main-2md-blocks">
@@ -91,25 +119,30 @@
         <p>Qovery Engine does not reinvent the wheel. It takes advantage of the best tools in the Cloud industry, such
           as Kubernetes, Terraform, and Helm to manage the deployment of the infrastructure and your applications.</p>
         <p>Servers, networking, security, all is done by the Engine for you.</p>
-        <div class="main-more"><a href="#">See more</a></div>
+        <div class="block-more"><a href="#">See more</a></div>
       </section>
       <section>
         <img src="./src/ressources/QV_how.png" alt="">
         <h3>Extensible</h3>
         <p>Qovery Engine is built to be highly extensible. Adding the support of a Cloud provider or a Continuous
           Integration platform is as simple as implementing a simple programmatic interface.</p>
-        <div class="main-more"><a href="#">See more</a></div>
+        <div class="block-more"><a href="#">See more</a></div>
       </section>
     </div>
-    <section class="QV-partners">
-      <h2>They use Qovery Engine</h2>
-      <div class="QV-partners-logos">
+  </main>
+  <section class="QV-partners">
+    <h2>They use Qovery Engine</h2>
+    <div class="carousel">
+      <div class="QV-partners-logos carousel-track">
         <img src="./src/ressources/QV_uses.png" alt="placeholder image"><img src="./src/ressources/QV_uses.png"
           alt="placeholder image"><img src="./src/ressources/QV_uses.png" alt="placeholder image"><img
-          src="./src/ressources/QV_uses.png" alt="placeholder image">
+          src="./src/ressources/QV_uses.png" alt="placeholder image"><img src="./src/ressources/QV_uses.png"
+          alt="placeholder image"><img src="./src/ressources/QV_uses.png" alt="placeholder image"><img
+          src="./src/ressources/QV_uses.png" alt="placeholder image"><img src="./src/ressources/QV_uses.png"
+          alt="placeholder image"><img src="./src/ressources/QV_uses.png" alt="placeholder image">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
   <footer>
     <div class="ft-bg-block"></div>
     <div class="ft-main-block">
@@ -127,16 +160,12 @@
               title="Twitter" target="_blank"><img class="icon-socials" src="./src/icons/twitter.png"
                 alt="logo de twitter"></a><a href="#" title="Discord" target="_blank"><img class="icon-socials"
                 src="./src/icons/discord.png" alt="logo de discord"></a></div>
-          <div class="card-github">
-            <a class="card-github-link" href="#" title="GitHub" target="_blank"><img src="./src/icons/github.svg"
-                width="20" height="20" alt="logo GitHub">
-              <p>Star <span>3,262</span></p>
-            </a>
-          </div>
+          <iframe src="https://ghbtns.com/github-btn.html?user=SimonCassan&repo=Prototypes&type=star&count=true"
+            frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
         </div>
         <div>
           <h3>Ressources</h3>
-          <ul>
+          <ul class="ft-links">
             <li><a href="#">Documentation</a></li>
             <li><a href="#">Guides</a></li>
             <li><a href="#">Tutorials</a></li>
@@ -148,7 +177,7 @@
         </div>
         <div>
           <h3>Community</h3>
-          <ul>
+          <ul class="ft-links">
             <li><a href="#">Discord</a></li>
             <li><a href="#">Forum</a></li>
             <li><a href="#">Community call</a></li>
@@ -158,7 +187,7 @@
         </div>
         <div>
           <h3>Qovery vs Others</h3>
-          <ul>
+          <ul class="ft-links">
             <li><a href="#">Heroku</a></li>
             <li><a href="#">Netlify</a></li>
             <li><a href="#">Terraform</a></li>
@@ -166,7 +195,7 @@
         </div>
         <div>
           <h3>Company</h3>
-          <ul>
+          <ul class="ft-links">
             <li><a href="#">Blog</a></li>
             <li><a href="#">Jobs</a></li>
             <li><a href="#">Team</a></li>

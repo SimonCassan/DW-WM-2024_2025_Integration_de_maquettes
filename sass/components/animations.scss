@@ -1,0 +1,74 @@
+pre {
+    max-width: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+}
+
+
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+
+}
+
+.carousel::before {
+    background: linear-gradient(90deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
+    left: 0;
+}
+
+.carousel::after {
+    background: linear-gradient(270deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
+    right: 0;
+}
+
+.carousel::before,
+.carousel::after {
+    content: "";
+    display: block;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    z-index: 2;
+}
+
+.carousel-track {
+    width: calc(200%);
+    animation: scroll 16s linear infinite;
+}
+
+
+
+.code-animation {
+    display: inline-block;
+    opacity: 0;
+    animation: fromTheLeft 1s forwards;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fromTheLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 footer {
     margin-top: 6rem;
 
@@ -58,10 +60,28 @@ footer {
     }
 }
 
-/* ---------------------------- */
+.ft-links a {
+    display: inline-block;
+    width: fit-content;
+    transition: color 0.4s;
 
-footer .card-github {
-    padding: 0 5px;
+    &:hover {
+        color: color.scale(grey, $lightness: -30%);
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: -3px;
+        background: #151B2B;
+        transition: width 0.4s;
+    }
 }
 
 /* --------------------------------- */

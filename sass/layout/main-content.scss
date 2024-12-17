@@ -44,32 +44,11 @@ main {
     }
 }
 
-.QV-partners {
-    h2 {
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-    }
-
-    .QV-partners-logos {
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
-
-
-
-
-
-
 
 // ---------------------------------------------
 main img {
     max-width: 100%;
 }
-
-
-
 
 
 .main-2md-blocks {
@@ -78,6 +57,15 @@ main img {
     align-items: baseline;
     text-align: justify;
 
+    .block-more {
+        margin-top: 1rem;
+
+        a {
+            color: #5D64D2;
+            text-transform: uppercase;
+        }
+    }
+
     section {
         max-width: 40%;
 
@@ -85,19 +73,20 @@ main img {
             margin: 1.2em 0;
             font-size: 1.5rem;
         }
-
-        a {
-            color: #5D64D2;
-            text-transform: uppercase;
-        }
     }
 }
 
 
-main .main_md2 section p:nth-of-type(2) {
-    margin-top: 1.2em;
-}
+.QV-partners {
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
 
-main .main_md2 section div {
-    margin-top: 1em;
+    .QV-partners-logos {
+        display: flex;
+        justify-content: space-between;
+    }
 }

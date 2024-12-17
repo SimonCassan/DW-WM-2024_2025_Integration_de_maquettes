@@ -1,24 +1,4 @@
-.card-github {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    color: black;
-    height: 28px;
-    gap: 0.3rem;
-    border-radius: 0.2rem;
-    border: 1px solid lightgrey;
-    width: fit-content;
-
-    p {
-        color: black;
-    }
-
-    span {
-        padding-left: 0.3rem;
-        border-left: 2px solid lightgrey;
-    }
-}
-
+@use 'sass:color';
 
 .btn {
     display: flex;
@@ -37,7 +17,7 @@
         padding: 12px 25px;
         border-radius: 0.3rem;
         font-size: 0.9rem;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
 
         &:hover {
             text-decoration: none;
@@ -54,12 +34,22 @@
     background-color: #6578C0;
 }
 
-
-main .btn-github:hover {
+.btn-github:hover {
+    background-color: color.scale(#454658, $lightness: -15%);
     box-shadow: 0 5px 5px #585970;
 }
 
-
-main .btn-discord:hover {
+.btn-discord:hover {
+    background-color: color.scale(#6578C0, $lightness: -15%);
     box-shadow: 0 5px 5px #6c80cc;
+}
+
+header {
+
+    .btn-discord,
+    .btn-github {
+        &:hover {
+            box-shadow: none;
+        }
+    }
 }

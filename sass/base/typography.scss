@@ -1,6 +1,8 @@
 $font-heading: 'Hanken Grotesk';
 $font-primary: 'SFUIText-Regular';
 $font-secondary: 'SFUIText-SemiBold';
+$font-tertiary: 'SFUIText-Bold';
+$font-code: 'Hack-Regular';
 $font-default: 'sans-serif';
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
@@ -21,6 +23,12 @@ $font-weight-extrabold: 800;
 }
 
 @font-face {
+    font-family: "SFUIText-Bold";
+    src: url(../src/fonts/SFUIText-Bold.ttf) format("truetype");
+    font-weight: $font-weight-bold;
+}
+
+@font-face {
     font-family: "Hack-Regular";
     src: url(../src/fonts/Hack-Regular.ttf) format("truetype");
     font-weight: $font-weight-regular;
@@ -37,7 +45,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: $font-header;
+    font-family: $font-heading;
 }
 
 h1,
@@ -62,6 +70,36 @@ footer p {
 }
 
 .header-content .header-subtitle {
-    font-family: $font-header;
+    font-family: $font-heading;
     font-weight: $font-weight-semibold;
+}
+
+.block-more a {
+    font-family: $font-tertiary;
+}
+
+code {
+    font-family: $font-code;
+    font-size: 0.8rem;
+    text-shadow: 0 2px 2px #ccc;
+
+    .code-indigo {
+        color: #33369F;
+    }
+
+    .code-purple {
+        color: #B160F0;
+    }
+
+    .code-gray {
+        color: #A8A8C1;
+    }
+
+    .code-orange {
+        color: #FF6240;
+    }
+
+    .code-aqua {
+        color: #6DE0F6;
+    }
 }
