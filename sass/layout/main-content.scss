@@ -45,7 +45,16 @@ main {
 }
 
 
-// ---------------------------------------------
+pre {
+    max-width: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+}
+
+
 main img {
     max-width: 100%;
 }
