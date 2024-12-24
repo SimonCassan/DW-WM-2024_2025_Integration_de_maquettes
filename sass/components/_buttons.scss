@@ -1,12 +1,12 @@
-@use 'sass:color';
+@use '../abstracts/mixins' as mixin;
 
 .btn {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
 
-    img {
-        margin-right: 0.2rem;
+    svg {
+        margin-right: 0.4rem;
     }
 
     a {
@@ -17,11 +17,16 @@
         padding: 12px 25px;
         border-radius: 0.3rem;
         font-size: 0.9rem;
-        transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
+        transition: transform 0.3s, box-shadow 0.2s, background-color 0.5s;
 
         &:hover {
             text-decoration: none;
+            transform: translateY(-2px);
             transform: scale(1.2);
+        }
+
+        &:active {
+            transform: translateY(3px);
         }
     }
 }
@@ -34,22 +39,14 @@
     background-color: #6578C0;
 }
 
-.btn-github:hover {
-    background-color: color.scale(#454658, $lightness: -15%);
-    box-shadow: 0 5px 5px #585970;
+.btn-github {
+    @include mixin.btn-styles(#454658);
 }
 
-.btn-discord:hover {
-    background-color: color.scale(#6578C0, $lightness: -15%);
-    box-shadow: 0 5px 5px #6c80cc;
+.btn-discord {
+    @include mixin.btn-styles(#6578C0);
 }
 
-header {
-
-    .btn-discord,
-    .btn-github {
-        &:hover {
-            box-shadow: none;
-        }
-    }
+.btn-no-shadow:hover {
+    box-shadow: none;
 }

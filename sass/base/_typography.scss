@@ -1,37 +1,27 @@
-$font-heading: 'Hanken Grotesk';
-$font-primary: 'SFUIText-Regular';
-$font-secondary: 'SFUIText-SemiBold';
-$font-tertiary: 'SFUIText-Bold';
-$font-code: 'Hack-Regular';
-$font-default: 'sans-serif';
-$font-weight-regular: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-$font-weight-extrabold: 800;
-
+@use '../abstracts/variables' as var;
 
 @font-face {
     font-family: "SFUIText-Regular";
     src: url(../src/fonts/SFUIText-Regular.ttf) format("truetype");
-    font-weight: $font-weight-regular;
+    font-weight: var.$font-weight-regular;
 }
 
 @font-face {
     font-family: "SFUIText-SemiBold";
     src: url(../src/fonts/SFUIText-Semibold.ttf) format("truetype");
-    font-weight: $font-weight-semibold;
+    font-weight: var.$font-weight-semibold;
 }
 
 @font-face {
     font-family: "SFUIText-Bold";
     src: url(../src/fonts/SFUIText-Bold.ttf) format("truetype");
-    font-weight: $font-weight-bold;
+    font-weight: var.$font-weight-bold;
 }
 
 @font-face {
     font-family: "Hack-Regular";
     src: url(../src/fonts/Hack-Regular.ttf) format("truetype");
-    font-weight: $font-weight-regular;
+    font-weight: var.$font-weight-regular;
 }
 
 html {
@@ -39,47 +29,47 @@ html {
 }
 
 body {
-    font-family: $font-default;
+    font-family: var.$font-default;
 }
 
 h1,
 h2,
 h3 {
-    font-family: $font-heading;
+    font-family: var.$font-heading;
 }
 
 h1,
 h2 {
-    font-weight: $font-weight-extrabold;
+    font-weight: var.$font-weight-extrabold;
 }
 
 h3 {
-    font-weight: $font-weight-bold;
+    font-weight: var.$font-weight-bold;
 }
 
 p,
 li {
-    font-family: $font-primary;
+    font-family: var.$font-primary;
 }
 
 a,
 footer h2,
 footer h3,
 footer p {
-    font-family: $font-secondary;
+    font-family: var.$font-secondary;
 }
 
 .header-content .header-subtitle {
-    font-family: $font-heading;
-    font-weight: $font-weight-semibold;
+    font-family: var.$font-heading;
+    font-weight: var.$font-weight-semibold;
 }
 
 .block-more a {
-    font-family: $font-tertiary;
+    font-family: var.$font-tertiary;
 }
 
 code {
-    font-family: $font-code;
+    font-family: var.$font-code;
     font-size: 0.8rem;
     // text-shadow: 1px 1px 3px #ccc;
 

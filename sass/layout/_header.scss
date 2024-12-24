@@ -1,5 +1,7 @@
+@use '../abstracts/variables' as var;
+
 header {
-    background-color: #151B2B;
+    background-color: var.$color-secondary-bg;
     padding: 2rem;
 
     .header-container {
@@ -22,7 +24,7 @@ header {
     gap: 1rem;
 
     h1 {
-        color: #A8A8C1;
+        color: var.$color-secondary-txt;
         line-height: 2rem;
     }
 }

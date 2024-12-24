@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as var;
+
 .carousel {
     overflow: hidden;
     position: relative;
@@ -59,4 +61,26 @@
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+@keyframes slide-bg {
+
+    0%,
+    100% {
+        background-position: 0, 0;
+    }
+
+    50% {
+        background-position: 0, 100%;
+    }
+}
+
+.ft-bg-block:before {
+    animation: slide-bg 18s infinite reverse;
+    background-image: var.$gradient-horizontal;
+    background-size: 200px 200px, 200%;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
 }
