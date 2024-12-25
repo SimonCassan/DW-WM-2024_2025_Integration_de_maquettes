@@ -1,46 +1,21 @@
 @use '../abstracts/variables' as var;
 
-.carousel {
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel::before {
-    background: linear-gradient(90deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
-    left: 0;
-}
-
-.carousel::after {
-    background: linear-gradient(270deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
-    right: 0;
-}
-
-.carousel::before,
-.carousel::after {
-    content: "";
-    display: block;
-    height: 80px;
-    position: absolute;
-    top: 0;
-    width: 10%;
-    z-index: 2;
-}
-
-.carousel-track {
-    width: calc(200%);
-    animation: scroll 16s linear infinite;
-}
-
-
 
 .code-animation {
-    display: inline-block;
     opacity: 0;
-    animation: fromTheLeft 1s forwards;
-    animation-delay: 1s;
+
+    &.animation-active {
+        display: inline-block;
+
+        &:nth-of-type(2n) {
+            animation: fromTheLeft 1.5s forwards;
+        }
+
+        &:nth-of-type(2n+1) {
+            animation: fromTheRight 1.5s forwards;
+        }
+    }
 }
-
-
 
 @keyframes scroll {
     from {
@@ -54,7 +29,20 @@
 
 @keyframes fromTheLeft {
     from {
-        transform: translateX(-100%);
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromTheRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
     }
 
     to {
@@ -73,14 +61,4 @@
     50% {
         background-position: 0, 100%;
     }
-}
-
-.ft-bg-block:before {
-    animation: slide-bg 18s infinite reverse;
-    background-image: var.$gradient-horizontal;
-    background-size: 200px 200px, 200%;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
 }

@@ -1,0 +1,31 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+//fade-out/fade-in for partners logo
+.carousel::before {
+    background: linear-gradient(90deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
+    left: 0;
+}
+
+.carousel::after {
+    background: linear-gradient(270deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
+    right: 0;
+}
+
+.carousel::before,
+.carousel::after {
+    content: "";
+    display: block;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    z-index: 2;
+}
+
+.carousel-track {
+    width: calc(200%);
+    animation: scroll 60s linear infinite;
+}

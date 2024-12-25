@@ -1,28 +1,62 @@
 @use '../abstracts/variables' as var;
 
 @font-face {
-    font-family: "SFUIText-Regular";
-    src: url(../src/fonts/SFUIText-Regular.ttf) format("truetype");
-    font-weight: var.$font-weight-regular;
-}
-
-@font-face {
-    font-family: "SFUIText-SemiBold";
-    src: url(../src/fonts/SFUIText-Semibold.ttf) format("truetype");
-    font-weight: var.$font-weight-semibold;
-}
-
-@font-face {
-    font-family: "SFUIText-Bold";
-    src: url(../src/fonts/SFUIText-Bold.ttf) format("truetype");
+    font-family: 'SFUIText';
+    src: url('../src/fonts/sfuitext-bold-webfont.woff2') format('woff2'),
+        url('../src/fonts/sfuitext-bold-webfont.woff') format('woff');
     font-weight: var.$font-weight-bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Hack-Regular";
-    src: url(../src/fonts/Hack-Regular.ttf) format("truetype");
-    font-weight: var.$font-weight-regular;
+    font-family: 'SFUIText';
+    src: url('../src/fonts/SFUIText-Semibold.woff2') format('woff2'),
+        url('../src/fonts/SFUIText-Semibold.woff') format('woff');
+    font-weight: var.$font-weight-semibold;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'SFUIText';
+    src: url('../src/fonts/sfuitext-regular-webfont.woff2') format('woff2'),
+        url('../src/fonts/sfuitext-regular-webfont.woff') format('woff');
+    font-weight: var.$font-weight-regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../src/fonts/HankenGrotesk-ExtraBold.woff2') format('woff2'),
+        url('../src/fonts/HankenGrotesk-ExtraBold.woff') format('woff');
+    font-weight: var.$font-weight-extrabold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../src/fonts/HankenGrotesk-Bold.woff2') format('woff2'),
+        url('../src/fonts/HankenGrotesk-Bold.woff') format('woff');
+    font-weight: var.$font-weight-bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../src/fonts/HankenGrotesk-SemiBold.woff2') format('woff2'),
+        url('../src/fonts/HankenGrotesk-SemiBold.woff') format('woff');
+    font-weight: var.$font-weight-semibold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hack-Regular';
+    src: url('../src/fonts/hack-regular-webfont.woff2') format('woff2'),
+        url('../src/fonts/hack-regular-webfont.woff') format('woff');
+    font-weight: var.$font-weight-regular;
+    font-style: normal;
+}
+
+
 
 html {
     font-size: 100%;
@@ -50,28 +84,26 @@ h3 {
 p,
 li {
     font-family: var.$font-primary;
+    font-weight: var.$font-weight-regular;
 }
 
 a,
 footer h2,
 footer h3,
 footer p {
-    font-family: var.$font-secondary;
+    font-weight: var.$font-weight-semibold;
+    font-family: var.$font-primary;
 }
 
-.header-content .header-subtitle {
+.header-subtitle {
     font-family: var.$font-heading;
     font-weight: var.$font-weight-semibold;
-}
-
-.block-more a {
-    font-family: var.$font-tertiary;
 }
 
 code {
     font-family: var.$font-code;
     font-size: 0.8rem;
-    // text-shadow: 1px 1px 3px #ccc;
+    text-shadow: 1px 1px 3px #ccc;
 
     .code-indigo {
         color: #33369F;

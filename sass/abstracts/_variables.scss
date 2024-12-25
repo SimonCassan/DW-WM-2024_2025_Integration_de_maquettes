@@ -2,7 +2,7 @@
 
 // FONTS
 $font-heading: 'Hanken Grotesk';
-$font-primary: 'SFUIText-Regular';
+$font-primary: 'SFUIText';
 $font-secondary: 'SFUIText-SemiBold';
 $font-tertiary: 'SFUIText-Bold';
 $font-code: 'Hack-Regular';
@@ -13,6 +13,7 @@ $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 
 // COLORS
+$color-primary-heading: #A8A8C1;
 $color-primary-txt: #454658;
 $color-secondary-txt: #808080;
 $color-primary-bg: #F9F9FD;
@@ -21,16 +22,21 @@ $color-secondary-bg: #151B2B;
 $color-github: #454658;
 $color-discord: #6578C0;
 
-
+$color-regular-links: #5D64D2;
 
 $color1: color.scale($color-secondary-bg, $lightness: 15%);
 $color2: color.scale($color-secondary-bg, $lightness: 35%);
 $color3: color.scale($color-secondary-bg, $lightness: 55%);
 
-$gradient-horizontal: url('../src/ressources/grain.png'), linear-gradient(93deg,
-        $color-secondary-bg 1.35%,
-        $color1 24.2%,
-        $color2 45.7%,
-        $color2 54.3%,
-        $color1 75.8%,
-        $color-secondary-bg 98.65%);
+$gradient-horizontal: url('../src/ressources/grain.webp'), linear-gradient(93deg,
+                $color-secondary-bg 1.35%,
+                $color1 24.2%,
+                $color2 45.7%,
+                $color2 54.3%,
+                $color1 75.8%,
+                $color-secondary-bg 98.65%);
+
+// Breakpoints
+$media-large: 1260px;
+$media-medium: 960px;
+$media-small: 480px;

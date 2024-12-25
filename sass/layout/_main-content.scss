@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as var;
+
 main {
     display: flex;
     flex-direction: column;
@@ -34,7 +36,7 @@ main {
 }
 
 .main-QVusage {
-    background-image: url('../src/ressources/bg_usage.png');
+    background-image: url('../src/ressources/bg_usage.webp');
     background-size: cover;
     background-position: top;
     height: 160px;
@@ -47,18 +49,20 @@ main {
 
 pre {
     max-width: 100%;
-    overflow: auto;
+    overflow: hidden;
     white-space: pre-wrap;
     padding: 10px;
     background-color: #fcfcfc;
     border: 1px solid #ccc;
-}
 
+    &.animations-completed {
+        overflow: auto;
+    }
+}
 
 main img {
     max-width: 100%;
 }
-
 
 .main-2md-blocks {
     display: flex;
@@ -66,13 +70,8 @@ main img {
     align-items: baseline;
     text-align: justify;
 
-    .block-more {
+    .btn-more {
         margin-top: 1rem;
-
-        a {
-            color: #5D64D2;
-            text-transform: uppercase;
-        }
     }
 
     section {
@@ -97,5 +96,12 @@ main img {
     .QV-partners-logos {
         display: flex;
         justify-content: space-between;
+        gap: 4rem;
+
+        img {
+            width: 160px;
+            object-fit: contain;
+        }
     }
+
 }
