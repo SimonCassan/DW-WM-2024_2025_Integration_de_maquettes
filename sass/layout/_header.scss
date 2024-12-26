@@ -1,7 +1,9 @@
 @use '../abstracts/variables' as var;
 
 header {
-    background-color: var.$color-secondary-bg;
+    // background-color: var.$color-secondary-bg;
+    background-image: url('../src/ressources/background-header.svg');
+    background-size: cover;
     padding: 2rem;
     height: 100vh;
     display: flex;
@@ -103,7 +105,47 @@ header {
 }
 
 @media screen and (max-width:var.$media-medium) {
+    .header-content {
+        justify-content: center;
+        margin-top: 6rem;
+
+        .header-block40 {
+            max-width: 80%;
+        }
+    }
+
     .header-img {
         display: none;
     }
+
+    .header-text {
+        text-align: center;
+    }
+
+    header .btn,
+    .header-text,
+    .header-text-h2 {
+        align-items: center;
+    }
+
+    .header-text-h2 iframe {
+        margin-right: -1.5rem;
+    }
+}
+
+@media screen and (max-width:var.$media-small) {
+    header {
+        h2 {
+            white-space: wrap;
+        }
+
+        .header-subtitle {
+            display: none;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
 }

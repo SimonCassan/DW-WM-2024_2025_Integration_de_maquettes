@@ -1,21 +1,23 @@
-.carousel {
+@use '../abstracts/variables' as var;
+
+.slider {
     overflow: hidden;
     position: relative;
 }
 
 //fade-out/fade-in for partners logo
-.carousel::before {
+.slider::before {
     background: linear-gradient(90deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
     left: 0;
 }
 
-.carousel::after {
+.slider::after {
     background: linear-gradient(270deg, #f9f9fd, #f9f9fd, hsla(0, 0%, 100%, 0));
     right: 0;
 }
 
-.carousel::before,
-.carousel::after {
+.slider::before,
+.slider::after {
     content: "";
     display: block;
     height: 80px;
@@ -25,7 +27,15 @@
     z-index: 2;
 }
 
-.carousel-track {
-    width: calc(200%);
-    animation: scroll 60s linear infinite;
+.slider-track {
+    width: 400%;
+    animation: scroll 140s linear infinite;
+}
+
+
+@media screen and (max-width: var.$media-small) {
+    .slider-track {
+        animation: scroll 70s linear infinite;
+        width: 500%;
+    }
 }

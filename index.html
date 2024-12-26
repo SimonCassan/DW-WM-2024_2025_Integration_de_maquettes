@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./src/icons/logo-cube.svg" type="image/svg">
-  <script defer src="./js/delay-animation.js"></script>
+  <script defer src="./js/animation--delay.js"></script>
+  <script defer src="./js/animation--finished.js"></script>
+  <script defer src="./js/slider--duplicate-logo.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <title>Qovery</title>
 </head>
@@ -22,7 +24,7 @@
           <div class="header-text-h2">
             <h2>Qovery Engine</h2>
             <iframe src="https://ghbtns.com/github-btn.html?user=Qovery&repo=Engine&type=star&count=true&size=large"
-              frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+              frameborder="0" scrolling="0" width="170" height="30" title="GitHub" loading="lazy"></iframe>
           </div>
           <p class="header-subtitle">Abstraction layer to deploy microservices applications on any Cloud provider.</p>
           <p>Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP,
@@ -66,7 +68,7 @@
       <p>Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP, Azure
         and others Cloud providers. The Qovery Engine is coded in Rust and takes advantage of Terraform, Helm,
         Kubectl, Docker to manage resources.</p>
-      <div><img src="./src/ressources/QV_how.webp" alt="Fonctionnement de Qovery"></div>
+      <div><img src="./src/ressources/QV_how.webp" alt="Fonctionnement de Qovery" loading="lazy"></div>
     </article>
     <article>
       <div class="main-QVusage">
@@ -116,7 +118,7 @@
           alt="">Join us on Discord</a></div>
     <div class="main-2md-blocks">
       <section>
-        <img src="./src/ressources/QV_deploy.webp" alt="Image futuristique et décorative">
+        <img src="./src/ressources/QV_deploy.webp" alt="Image futuristique et décorative" loading="lazy">
         <h3>Deploy real world applications</h3>
         <p>Qovery Engine empowers you to deploy complex applications, such as a backend, a frontend, and a database in
           a very simple way.</p>
@@ -124,7 +126,7 @@
         <div><a class="btn-more" href="#">See more</a></div>
       </section>
       <section>
-        <img src="./src/ressources/QV_resiliency.webp" alt="Image futuristique et décorative">
+        <img src="./src/ressources/QV_resiliency.webp" alt="Image futuristique et décorative" loading="lazy">
         <h3>Resiliency is key</h3>
         <p>Qovery Engine knows when something goes wrong on the deployment of your applications. Qovery Engine is
           built with resiliency in mind.</p>
@@ -135,7 +137,7 @@
     </div>
     <div class="main-2md-blocks">
       <section>
-        <img src="./src/ressources/QV_ontop.webp" alt="Illustration du niveau d'abstraction de Qovery">
+        <img src="./src/ressources/QV_ontop.webp" alt="Illustration du niveau d'abstraction de Qovery" loading="lazy">
         <h3>On top of the best tools</h3>
         <p>Qovery Engine does not reinvent the wheel. It takes advantage of the best tools in the Cloud industry, such
           as Kubernetes, Terraform, and Helm to manage the deployment of the infrastructure and your applications.</p>
@@ -143,7 +145,7 @@
         <div><a class="btn-more" href="#">See more</a></div>
       </section>
       <section>
-        <img src="./src/ressources/QV_how.webp" alt="Fonctionnement de Qovery">
+        <img src="./src/ressources/QV_how.webp" alt="Fonctionnement de Qovery" loading="lazy">
         <h3>Extensible</h3>
         <p>Qovery Engine is built to be highly extensible. Adding the support of a Cloud provider or a Continuous
           Integration platform is as simple as implementing a simple programmatic interface.</p>
@@ -152,8 +154,8 @@
     </div>
     <section class="QV-partners">
       <h2>They use Qovery Engine</h2>
-      <div class="carousel">
-        <div class="QV-partners-logos carousel-track">
+      <div class="slider">
+        <div class="QV-partners-logos slider-track">
           <img src="./src/ressources/partners/elevo_logo.svg" alt="Elevo logo"><img
             src="./src/ressources/partners/findigs logo.avif" alt="Findigs logo"><img
             src="./src/ressources/partners/deuna_logo.avif" alt="Deuna logo"><img
@@ -172,14 +174,15 @@
     <div class="ft-bg-block"></div>
     <div class="ft-main-block">
       <div class="ft-logo"><img src="./src/icons/logo-footer.svg"
-          alt="logo de Qovery sous la forme d'un hexagone avec sur le coté un cube qui est rattaché et au centre un second cube, le tout dans une couleur violette">
+          alt="logo de Qovery sous la forme d'un hexagone avec sur le coté un cube qui est rattaché et au centre un second cube, le tout dans une couleur violette"
+          loading="lazy">
         <h2>Qovery</h2>
       </div>
       <div class="ft-content">
-        <div class="ft-content-col">
+        <div class="ft-content-infos">
           <p>Qovery combines the power of Kubernetes, the reliabily of AWS, and the simplicity of Heroku to deploy your
             apps.</p>
-          <div class="ft-content-col-img">
+          <div class="ft-content-infos-img">
             <a href="#" title="GitHub" target="_blank" aria-label="GitHub de Qovery">
               <svg class="icon-socials" height="28px" id="Layer_1" style="enable-background:new 0 0 512 512;"
                 version="1.1" viewBox="0 0 512 512" width="28px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -222,9 +225,9 @@
             </a>
           </div>
           <iframe src="https://ghbtns.com/github-btn.html?user=Qovery&repo=Engine&type=star&count=true" frameborder="0"
-            scrolling="0" width="170" height="30" title="GitHub"></iframe>
+            scrolling="0" width="170" height="30" title="GitHub" loading="lazy"></iframe>
         </div>
-        <div>
+        <div class="ft-block-links">
           <h3>Ressources</h3>
           <ul class="ft-links">
             <li><a href="#">Documentation</a></li>
@@ -236,7 +239,7 @@
             <li><a href="#">Github</a></li>
           </ul>
         </div>
-        <div>
+        <div class="ft-block-links">
           <h3>Community</h3>
           <ul class="ft-links">
             <li><a href="#">Discord</a></li>
@@ -246,7 +249,7 @@
             <li><a href="#">Roadmap</a></li>
           </ul>
         </div>
-        <div>
+        <div class="ft-block-links">
           <h3>Qovery vs Others</h3>
           <ul class="ft-links">
             <li><a href="#">Heroku</a></li>
@@ -254,7 +257,7 @@
             <li><a href="#">Terraform</a></li>
           </ul>
         </div>
-        <div>
+        <div class="ft-block-links">
           <h3>Company</h3>
           <ul class="ft-links">
             <li><a href="#">Blog</a></li>
