@@ -38,6 +38,7 @@ footer {
 
 .ft-logo {
     display: flex;
+    gap: 1rem;
     align-items: center;
     margin-bottom: 4rem;
 
@@ -71,7 +72,6 @@ footer {
 
         &:hover {
             background-color: #ddd;
-            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#ddd));
             background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
         }
     }
