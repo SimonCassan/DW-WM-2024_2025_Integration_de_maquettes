@@ -21,8 +21,3 @@ This project is a redesign of the old version of the **Qovery.com** website, cre
 
 The prototype is live and accessible online via GitHub Pages:
 [**Qovery Live Demo**](<https://simoncassan.github.io/Qovery/>)
-
-## Screenshots
-
-[![Mobile View Thumbnail](./screenshots/mobile-view-thumb.png)](./screenshots/mobile-view.png)
-[![Desktop View Thumbnail](./screenshots/desktop-view-thumb.png)](./screenshots/desktop-view.png)
