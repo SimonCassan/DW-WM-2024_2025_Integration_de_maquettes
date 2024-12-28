@@ -31,7 +31,7 @@ footer {
 }
 
 .ft-main-block {
-    padding: 4rem 0;
+    padding: 4rem 0 1rem;
     max-width: 1250px;
     margin: auto;
 }
@@ -132,7 +132,7 @@ footer {
     li {
         border-right: 1px solid var.$color-secondary-txt;
         padding-right: 1rem;
-        margin-bottom: 0.5rem;
+        margin: 1rem 0;
 
         &:last-of-type {
             border: none;
@@ -179,9 +179,11 @@ footer {
         flex-direction: column;
         border: none;
         gap: 0;
+        padding-top: 0;
 
         li {
             border: none;
+            margin: 0.25rem 0;
         }
     }
 }

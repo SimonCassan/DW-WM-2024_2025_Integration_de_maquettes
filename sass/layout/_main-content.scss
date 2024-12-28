@@ -125,8 +125,10 @@ pre {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: justify;
+        text-align: center;
         gap: 1rem;
+        max-width: 100%;
+        padding: 0 2rem;
     }
 
     main article {
@@ -145,6 +147,7 @@ pre {
 @media screen and (max-width:var.$media-small) {
     .QV-partners {
         h2 {
+            margin-top: 2rem;
             font-size: 1.5rem;
         }
     }

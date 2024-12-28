@@ -5,7 +5,7 @@ header {
     background-image: url('../src/ressources/background_header.svg');
     background-size: cover;
     padding: 2rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 
@@ -163,10 +163,6 @@ header {
 }
 
 @media screen and (max-height: 670px) {
-    header {
-        height: 670px;
-    }
-
     .header-logo {
         svg {
             width: 30px;
@@ -174,11 +170,7 @@ header {
         }
 
         h1 {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
-    }
-
-    .header-text-h2 h2 {
-        font-size: 2rem;
     }
 }
