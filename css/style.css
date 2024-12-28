@@ -22,11 +22,15 @@ html {
     font-size: 100%;
 }
 
+body {
+    box-sizing: border-box;
+}
+
 body,
 input,
+select,
 textarea {
     font-family: Montserrat, sans-serif;
-    box-sizing: border-box;
 }
 
 h1,
@@ -68,28 +72,22 @@ blockquote {
     color: #fff;
 }
 
-header {
-    height: 30vh;
-}
-
-header nav {
+nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 1.5rem 0;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-header nav a {
+nav a {
     color: #000;
     font-weight: 600;
+    padding: 1rem 1.5rem;
+    display: inline-block;
 }
-
-header nav li {
-    padding: 0.5rem;
-}
-
 
 main {
     margin-bottom: 6rem;
@@ -98,57 +96,15 @@ main {
     gap: 6rem;
 }
 
-main article>p,
-blockquote {
-    margin-bottom: 2rem;
-}
-
-article:not(.bg-color-fill) {
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
-}
-
-.article-img img {
-    margin-top: 4rem;
-}
-
-.article-text {
-    padding: 2rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-}
-
-.article-text h3 {
-    text-transform: uppercase;
-}
-
-.article-text h4 {
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.article-text ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
 .hero-banner {
     position: relative;
-    height: 70vh;
 }
 
 .hero-banner h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
-    height: 100%;
+    min-height: calc(100vh - 20.5rem);
     background-image: url('../src/img/background.png');
     background-size: cover;
     background-position: center;
@@ -174,6 +130,49 @@ article:not(.bg-color-fill) {
     scroll-margin-top: 1.5rem;
 }
 
+p:not(.jobs p, .copyrights p, .icon-text-block p),
+blockquote {
+    margin-bottom: 2rem;
+}
+
+article:not(.jobs) {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+.societe img {
+    margin-top: 4rem;
+    height: 600px;
+    object-fit: cover;
+}
+
+.article-text {
+    margin-top: -0.5rem;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.article-text h3 {
+    text-transform: uppercase;
+}
+
+.article-text h4 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.article-text ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .btn {
     background-color: #DD4546;
     font-weight: 700;
@@ -185,6 +184,7 @@ article:not(.bg-color-fill) {
 .cards-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -195,6 +195,8 @@ article:not(.bg-color-fill) {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 400px;
+    width: 100%;
 }
 
 .card p {
@@ -211,6 +213,10 @@ article:not(.bg-color-fill) {
     background-color: #DD4546;
 }
 
+#historique {
+    margin-bottom: 6rem;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -223,29 +229,62 @@ article:not(.bg-color-fill) {
 
 .contact-form input,
 .contact-form textarea,
-.contact-form select {
+.contact-form select,
+.contact-form button {
     border-radius: 5px;
     border: 1px solid lightgrey;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
 }
 
-.contact-form input[type="submit"] {
+.contact-form button {
     background-color: #16213D;
     color: #fff;
     font-weight: 600;
+    transition: transform 0.25s, box-shadow 0.2s;
 }
 
-.icon-text-block {
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    transform: translateY(0px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-form+div {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%;
-    margin: auto;
+    flex-direction: column;
 }
 
-.icon-text-block svg {
-    margin-right: 0.5rem;
+.contact-form-1,
+.contact-form-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.contact-form-2 {
+    margin-top: 1rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+select {
+    color: gray;
+}
+
+input:not(input[type="checkbox"]):focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--bg-color);
+}
+
 
 .ft-main-content {
     display: flex;
@@ -284,6 +323,28 @@ article:not(.bg-color-fill) {
     margin-bottom: 0.5rem;
 }
 
+.icon-text-block {
+    width: fit-content;
+    margin: auto;
+}
+
+.icon-text-block svg {
+    float: left;
+}
+
+.icon-text-block:first-of-type svg {
+    margin-right: -0.9rem;
+}
+
+.icon-text-block:last-of-type svg {
+    margin-right: 0.5rem;
+    margin-top: 0.15rem;
+}
+
+.icon-text-block:last-of-type p {
+    display: inline;
+}
+
 .copyrights {
     border-top: 1px solid #fff;
 }
@@ -291,4 +352,141 @@ article:not(.bg-color-fill) {
 .copyrights p {
     padding: 1.25rem 2rem;
     text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+    .hero-banner h1 {
+        min-height: calc(100vh - 9.5rem);
+    }
+
+    nav {
+        gap: 1rem;
+        padding: 1.5rem 0 0;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav a {
+        padding: 1.5rem;
+    }
+
+    .societe {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .societe img {
+        margin-top: 0;
+    }
+
+    .societe>div {
+        flex: 1;
+    }
+
+    .jobs {
+        display: flex;
+    }
+
+    .jobs>* {
+        width: 50%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .article-text {
+        box-sizing: content-box;
+        margin-top: 0;
+        margin-left: -0.5rem;
+    }
+
+    .cards-block {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .card {
+        max-width: 30%;
+        max-height: 100%;
+        justify-content: center;
+    }
+
+    .ft-logo-block {
+        display: none;
+    }
+
+    .ft-links-block {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .icon-text-block {
+        width: initial;
+        margin: 0;
+    }
+
+    .ft-links-block .icon-text-block svg {
+        margin-right: 0.5rem;
+    }
+
+    .icon-text-block p,
+    .ft-links-block {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    header {
+        padding: 0 2rem;
+    }
+
+    nav {
+        flex-direction: row;
+        min-height: initial;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .hero-banner h1 {
+        min-height: calc(100vh - 4.2rem);
+    }
+
+    .societe img {
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .australia {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #contact {
+        margin-bottom: 6rem;
+    }
+
+    #historique {
+        margin-bottom: 0;
+    }
+
+    article:not(.jobs),
+    .ft-main-content {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .jobs {
+        max-width: 1666px;
+        margin: auto;
+    }
+
+    .icon-text-block {
+        align-items: center;
+    }
 }
