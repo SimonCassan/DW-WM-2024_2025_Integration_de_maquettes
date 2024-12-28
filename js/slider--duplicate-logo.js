@@ -1,1 +1,2 @@
-const track=document.querySelector('.slider-track');track.innerHTML+=track.innerHTML;
+const track = document.querySelector('.slider-track');
+track.innerHTML += track.innerHTML;

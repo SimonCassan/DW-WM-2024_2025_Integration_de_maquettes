@@ -1,0 +1,159 @@
+@use '../abstracts/variables' as var;
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 800px;
+    // width: 70%;
+    margin: auto;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .btn {
+        justify-content: center;
+        margin-bottom: 4em;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    h2,
+    article p {
+        text-align: center;
+    }
+}
+
+.main-QVusage {
+    background-image: url('../src/ressources/bg_usage.webp');
+    background-size: cover;
+    background-position: top;
+    height: 160px;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+
+pre {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+
+    &.animations-completed {
+        overflow: auto;
+    }
+}
+
+.main-2md-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: justify;
+
+    .btn-more {
+        margin-top: 1rem;
+    }
+
+    section {
+        max-width: 40%;
+
+        h3 {
+            margin: 1.2em 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+.QV-partners {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .QV-partners-logos {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+
+        img {
+            width: 160px;
+            object-fit: contain;
+        }
+    }
+
+}
+
+
+@media screen and (max-width:var.$media-medium) {
+    .QV-partners {
+        .QV-partners-logos img {
+            width: 90px;
+        }
+    }
+
+    .main-2md-blocks {
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    .main-2md-blocks section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        gap: 1rem;
+    }
+
+    main article {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width:var.$media-medium-small) {
+    main .btn {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:var.$media-small) {
+    .QV-partners {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    main section p:nth-of-type(2) {
+        display: none;
+    }
+
+    .main-2md-blocks section h3 {
+        font-size: 1.2rem;
+    }
+}

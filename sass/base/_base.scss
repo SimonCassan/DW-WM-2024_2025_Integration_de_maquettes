@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as var;
+
+body {
+    background-color: var.$color-primary-bg;
+    box-sizing: border-box;
+}
+
+h2,
+h3,
+p {
+    color: var.$color-primary-txt;
+}
+
+p,
+li {
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn,
+h2,
+h3 {
+    white-space: nowrap;
+}
+
+iframe {
+    border: none;
+}
+
+.ft-legal {
+    a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
