@@ -273,9 +273,17 @@ article:not(.jobs) {
     margin-bottom: 6rem;
 }
 
-.cards-block {
+.cards-block,
+.card,
+.contact-form,
+.contact-form+div,
+.contact-form-1,
+.contact-form-2 {
     display: flex;
     flex-direction: column;
+}
+
+.cards-block {
     align-items: center;
     gap: 2rem;
 }
@@ -283,12 +291,12 @@ article:not(.jobs) {
 .card {
     border-radius: 10px;
     padding: 1.5rem 1rem;
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     max-width: 400px;
     width: 100%;
+    height: 225px;
 }
 
 .card p {
@@ -308,9 +316,9 @@ article:not(.jobs) {
 
 
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.contact-form,
+.contact-form-1,
+.contact-form-2 {
     gap: 1rem;
 }
 
@@ -339,18 +347,6 @@ article:not(.jobs) {
     cursor: pointer;
 }
 
-.contact-form+div {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form-1,
-.contact-form-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .contact-form-2 {
     margin-top: 1rem;
 }
@@ -373,10 +369,14 @@ select:focus {
 
 
 
-
-.ft-main-content {
+.ft-main-content,
+.ft-logo-block,
+.ft-links-block {
     display: flex;
     flex-direction: column;
+}
+
+.ft-main-content {
     align-items: center;
     text-align: center;
     gap: 4rem;
@@ -391,15 +391,11 @@ select:focus {
 }
 
 .ft-logo-block {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
 .ft-links-block {
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
 }
 
@@ -454,7 +450,10 @@ select:focus {
         padding: 1.5rem 0 0;
     }
 
-    nav ul {
+    nav ul,
+    .societe,
+    .jobs,
+    .contact-form-box {
         display: flex;
     }
 
@@ -463,7 +462,6 @@ select:focus {
     }
 
     .societe {
-        display: flex;
         align-items: center;
         gap: 2rem;
     }
@@ -477,7 +475,6 @@ select:focus {
     }
 
     .jobs {
-        display: flex;
         height: 400px;
     }
 
@@ -509,12 +506,12 @@ select:focus {
 
     .card {
         max-width: 30%;
+        height: initial;
         max-height: 100%;
         justify-content: center;
     }
 
     .contact-form-box {
-        display: flex;
         gap: 1rem;
     }
 
