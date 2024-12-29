@@ -122,7 +122,7 @@ nav a::after {
     width: 0;
     height: 2px;
     display: block;
-    margin-top: -2px;
+    margin-top: 1px;
     background: var(--bg-color);
     transition: width 0.3s;
 }
@@ -241,7 +241,7 @@ article:not(.jobs) {
     border-radius: 16px;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgb(224, 142, 142) 50%);
     background-size: 225%;
-    transition: background-position 0.35s, transform 0.25s, box-shadow 0.2s;
+    transition: transform 0.25s, box-shadow 0.2s;
 }
 
 .contact-form {
@@ -250,7 +250,7 @@ article:not(.jobs) {
 
 .btn:hover {
     transform: scale(1.2) translateY(-2px);
-    background-position: 100%;
+    animation: hover-gradient 1.5s cubic-bezier(0, 0, 0.2, 1.0);
 }
 
 .contact-form button:hover {
@@ -430,6 +430,23 @@ select:focus {
 .copyrights p {
     padding: 1.25rem 2rem;
     text-align: center;
+}
+
+
+
+
+@keyframes hover-gradient {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 185%;
+    }
 }
 
 
