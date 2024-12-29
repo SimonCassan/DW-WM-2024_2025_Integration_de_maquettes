@@ -72,6 +72,10 @@ blockquote {
     color: #fff;
 }
 
+#navbar {
+    background: linear-gradient(#fff, #fff 95%, #c4c4c4);
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -144,7 +148,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 20.5rem);
-    background-image: url('../src/img/background.png');
+    background-image: url('../src/img/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +182,7 @@ main {
 #expertise,
 #historique,
 #contact {
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 6rem;
 }
 
 p:not(.jobs p, .copyrights p, .icon-text-block p),
@@ -234,12 +238,15 @@ article:not(.jobs) {
 }
 
 .btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(-2px);
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
 }
 
 .btn:hover,
 .contact-form button:hover {
-    transform: translateY(-2px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -390,10 +397,6 @@ select:focus {
     float: left;
 }
 
-.icon-text-block:first-of-type svg {
-    margin-right: -0.9rem;
-}
-
 .icon-text-block:last-of-type svg {
     margin-right: 0.5rem;
     margin-top: 0.15rem;
@@ -413,6 +416,12 @@ select:focus {
 }
 
 @media screen and (min-width: 760px) {
+    #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
     .hero-banner h1 {
         min-height: calc(100vh - 9.5rem);
     }
@@ -540,6 +549,9 @@ select:focus {
 
     .hero-banner h1 {
         min-height: calc(100vh - 4.2rem);
+        font-size: 3rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 
     .societe img {
