@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Arial Rounded MT Bold';
-    src: url(../src/fonts/Arial-Rounded-MT-Bold.ttf);
+    src: url(../src/fonts/arial-rounded-mt-bold.woff2) format('woff2'),
+        url(../src/fonts/arial-rounded-mt-bold.woff) format('woff'),
+        url(../src/fonts/arial-rounded-mt-bold.ttf) format('ttf');
     font-style: normal;
     font-weight: 700;
 }
@@ -70,10 +72,6 @@ blockquote {
 .bg-color-fill {
     background-color: var(--bg-color);
     color: #fff;
-}
-
-#navbar {
-    background: linear-gradient(#fff, #fff 95%, #c4c4c4);
 }
 
 nav {
@@ -420,6 +418,7 @@ select:focus {
         position: sticky;
         top: 0;
         z-index: 10;
+        background: linear-gradient(#fff, #fff 95%, #c4c4c4);
     }
 
     .hero-banner h1 {
