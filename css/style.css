@@ -2,7 +2,7 @@
     font-family: 'Arial Rounded MT Bold';
     src: url(../src/fonts/arial-rounded-mt-bold.woff2) format('woff2'),
         url(../src/fonts/arial-rounded-mt-bold.woff) format('woff'),
-        url(../src/fonts/arial-rounded-mt-bold.ttf) format('ttf');
+        url(../src/fonts/arial-rounded-mt-bold.ttf) format('truetype');
     font-style: normal;
     font-weight: 700;
 }
@@ -74,6 +74,12 @@ blockquote {
     color: #fff;
 }
 
+.bg-gradient {
+    background: linear-gradient(var(--bg-color), #3C5DA8);
+}
+
+
+
 nav {
     display: flex;
     flex-direction: column;
@@ -130,6 +136,9 @@ footer a:active {
     transform: scale(0.9);
 }
 
+
+
+
 main {
     margin-bottom: 6rem;
     display: flex;
@@ -176,7 +185,7 @@ main {
     transform: scale(1) translateY(0);
 }
 
-#content-start,
+#societe,
 #expertise,
 #historique,
 #contact {
@@ -222,6 +231,9 @@ article:not(.jobs) {
     gap: 1rem;
 }
 
+
+
+
 .btn {
     background-color: var(--red-color);
     font-weight: 700;
@@ -252,6 +264,13 @@ article:not(.jobs) {
 .contact-form button:active {
     transform: translateY(0px);
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+#historique {
+    margin-bottom: 6rem;
 }
 
 .cards-block {
@@ -286,9 +305,8 @@ article:not(.jobs) {
     background-color: var(--red-color);
 }
 
-#historique {
-    margin-bottom: 6rem;
-}
+
+
 
 .contact-form {
     display: flex;
@@ -298,6 +316,11 @@ article:not(.jobs) {
 
 .contact-form a {
     color: var(--red-color);
+    transition: font-weight 0.2s;
+}
+
+.contact-form a:hover {
+    font-weight: 600;
 }
 
 .contact-form input,
@@ -347,6 +370,8 @@ textarea:focus,
 select:focus {
     outline: 3px solid var(--bg-color);
 }
+
+
 
 
 .ft-main-content {
@@ -400,10 +425,6 @@ select:focus {
     margin-top: 0.15rem;
 }
 
-.icon-text-block:last-of-type p {
-    display: inline;
-}
-
 .copyrights {
     border-top: 1px solid #fff;
 }
@@ -412,6 +433,9 @@ select:focus {
     padding: 1.25rem 2rem;
     text-align: center;
 }
+
+
+
 
 @media screen and (min-width: 760px) {
     #navbar {
@@ -526,7 +550,6 @@ select:focus {
         margin-right: 0.5rem;
     }
 
-    .icon-text-block p,
     .ft-links-block {
         text-align: left;
     }
@@ -580,10 +603,6 @@ select:focus {
     .jobs {
         max-width: 1666px;
         margin: auto;
-    }
-
-    .icon-text-block {
-        align-items: center;
     }
 
     .ft-main-content {
