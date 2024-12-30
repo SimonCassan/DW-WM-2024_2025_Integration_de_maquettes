@@ -68,7 +68,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+.header-subtitle {
     font-family: var.$font-heading;
 }
 
@@ -81,22 +82,24 @@ h3 {
     font-weight: var.$font-weight-bold;
 }
 
+a,
+footer h2,
+footer h3,
 p,
 li {
     font-family: var.$font-primary;
+}
+
+p,
+li {
     font-weight: var.$font-weight-regular;
 }
 
 a,
 footer h2,
 footer h3,
-footer p {
-    font-weight: var.$font-weight-semibold;
-    font-family: var.$font-primary;
-}
-
+footer p,
 .header-subtitle {
-    font-family: var.$font-heading;
     font-weight: var.$font-weight-semibold;
 }
 
@@ -125,10 +128,3 @@ code {
         color: #6DE0F6;
     }
 }
-
-
-// @media screen and (max-width: var.$media-small) {
-//     html {
-//         font-size: 85%;
-//     }
-// }
