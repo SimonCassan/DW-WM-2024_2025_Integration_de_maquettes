@@ -181,6 +181,12 @@ footer {
     .ft-block-links {
         text-align: center;
     }
+
+    .ft-links a {
+        &:hover {
+            transform: translateX(0) translateY(-3px);
+        }
+    }
 }
 
 @media screen and (max-width: var.$media-medium-small) {
