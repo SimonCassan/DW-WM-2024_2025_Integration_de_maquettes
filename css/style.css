@@ -44,6 +44,9 @@ h4 {
     font-family: 'Arial Rounded MT Bold';
 }
 
+
+
+
 h2 {
     margin-bottom: 2rem;
 }
@@ -63,6 +66,11 @@ ul:not(.article-text ul) {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 blockquote {
     color: #16213D;
     font-size: 1.25rem;
@@ -78,6 +86,14 @@ blockquote {
     background: linear-gradient(var(--bg-color), #3C5DA8);
 }
 
+#societe,
+#expertise,
+#historique,
+#contact {
+    scroll-margin-top: 6rem;
+}
+
+
 
 
 nav {
@@ -90,11 +106,6 @@ nav {
     gap: 1rem;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
 nav a {
     color: #000;
     font-weight: 600;
@@ -104,7 +115,7 @@ nav a {
 nav a,
 footer a {
     display: inline-block;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.2s;
+    transition: color 0.3s, text-shadow 0.25s, transform 0.3s;
 }
 
 nav a:hover {
@@ -112,7 +123,7 @@ nav a:hover {
 }
 
 nav a:hover,
-footer a:hover {
+footer a:not(.phone_block a):hover {
     text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
     transform: scale(1.1);
 }
@@ -137,6 +148,7 @@ footer a:active {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 main {
@@ -184,13 +196,6 @@ main {
     transform: scale(1) translateY(0);
 }
 
-#societe,
-#expertise,
-#historique,
-#contact {
-    scroll-margin-top: 6rem;
-}
-
 p:not(.jobs p, .copyrights p, .icon-text-block p),
 blockquote {
     margin-bottom: 2rem;
@@ -231,6 +236,7 @@ article:not(.jobs) {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 .btn {
@@ -241,10 +247,10 @@ article:not(.jobs) {
     border-radius: 16px;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgb(224, 142, 142) 50%);
     background-size: 225%;
-    transition: transform 0.25s, box-shadow 0.2s;
 }
 
-.contact-form {
+.contact-form,
+.btn {
     transition: transform 0.25s, box-shadow 0.2s;
 }
 
@@ -269,6 +275,7 @@ article:not(.jobs) {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 #historique {
@@ -316,7 +323,7 @@ article:not(.jobs) {
 }
 
 
-
+/* ---------------------------------------------------------------------------------- */
 
 .contact-form,
 .contact-form-1,
@@ -370,6 +377,8 @@ select:focus {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
+
 
 .ft-main-content,
 .ft-logo-block,
@@ -410,17 +419,26 @@ select:focus {
 }
 
 .icon-text-block {
-    width: fit-content;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-text-block svg {
-    float: left;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
 }
 
-.icon-text-block:last-of-type svg {
-    margin-right: 0.5rem;
-    margin-top: 0.15rem;
+.icon-text-block p {
+    width: min-content;
+}
+
+.phone_block {
+    transition: transform 0.3s;
+}
+
+.phone_block:hover {
+    transform: scale(1.1) translateX(4px);
 }
 
 .copyrights {
@@ -433,6 +451,7 @@ select:focus {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 @keyframes hover-gradient {
@@ -450,7 +469,12 @@ select:focus {
 }
 
 
-
+/* ---------------------------------------------------------------------------------- */
+@media screen and (min-width: 390px) {
+    .icon-text-block p {
+        width: initial;
+    }
+}
 
 @media screen and (min-width: 760px) {
     #navbar {
@@ -558,8 +582,7 @@ select:focus {
     }
 
     .icon-text-block {
-        width: initial;
-        margin: 0;
+        justify-content: flex-start
     }
 
     .ft-links-block .icon-text-block svg {
