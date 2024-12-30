@@ -19,6 +19,7 @@
 :root {
     --bg-color: #2E4480;
     --red-color: #DD4546;
+    --tertiary-color: #16213D;
 }
 
 html {
@@ -45,6 +46,7 @@ h4 {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 h2 {
@@ -72,7 +74,7 @@ a {
 }
 
 blockquote {
-    color: #16213D;
+    color: var(--tertiary-color);
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -94,6 +96,7 @@ blockquote {
 }
 
 
+/* ---------------------------------------------------------------------------------- */
 
 
 nav {
@@ -149,12 +152,22 @@ footer a:active {
 
 
 /* ---------------------------------------------------------------------------------- */
+main,
+.article-text,
+.article-text ul {
+    display: flex;
+    flex-direction: column;
+}
 
+.hero-banner h1,
+.article-text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 main {
     margin-bottom: 6rem;
-    display: flex;
-    flex-direction: column;
     gap: 6rem;
 }
 
@@ -164,17 +177,14 @@ main {
 
 .hero-banner h1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: calc(100vh - 16.9rem);
     background-image: url('../src/img/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    text-align: center;
     padding: 4rem 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .hero-banner a {
@@ -215,11 +225,6 @@ article:not(.jobs) {
 .article-text {
     margin-top: -0.5rem;
     padding: 2rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: 2rem;
 }
 
@@ -229,12 +234,22 @@ article:not(.jobs) {
 }
 
 .article-text ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
+.jobs {
+    height: 800px;
+}
+
+.jobs>* {
+    height: 50%;
+}
+
+.jobs img {
+    object-fit: cover;
+    object-position: right;
+}
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -305,7 +320,7 @@ article:not(.jobs) {
     text-align: center;
     max-width: 400px;
     width: 100%;
-    height: 225px;
+    height: 250px;
 }
 
 .card p {
@@ -350,7 +365,7 @@ article:not(.jobs) {
 }
 
 .contact-form button {
-    background-color: #16213D;
+    background-color: var(--tertiary-color);
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -387,14 +402,16 @@ select:focus {
     flex-direction: column;
 }
 
-.ft-main-content {
+.ft-main-content,
+.ft-logo-block,
+.icon-text-block {
     align-items: center;
+}
+
+.ft-main-content {
     text-align: center;
     gap: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 95%;
-    margin: auto;
+    padding: 2rem 1.5rem;
 }
 
 .ft-main-content img {
@@ -402,7 +419,6 @@ select:focus {
 }
 
 .ft-logo-block {
-    align-items: center;
     gap: 1rem;
 }
 
@@ -420,17 +436,12 @@ select:focus {
 
 .icon-text-block {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .icon-text-block svg {
     margin-right: 0.5rem;
     flex-shrink: 0;
-}
-
-.icon-text-block p {
-    width: min-content;
 }
 
 .phone_block {
@@ -470,11 +481,7 @@ select:focus {
 
 
 /* ---------------------------------------------------------------------------------- */
-@media screen and (min-width: 390px) {
-    .icon-text-block p {
-        width: initial;
-    }
-}
+
 
 @media screen and (min-width: 760px) {
     #navbar {
@@ -486,6 +493,7 @@ select:focus {
 
     .hero-banner h1 {
         min-height: calc(100vh - 9.5rem);
+        font-size: 2.5rem;
     }
 
     nav {
@@ -513,7 +521,9 @@ select:focus {
         margin-top: 0;
     }
 
-    .societe>div {
+    .societe>div,
+    .contact-form-1,
+    .contact-form-2 {
         flex: 1;
     }
 
@@ -522,9 +532,8 @@ select:focus {
     }
 
     .jobs>* {
+        height: initial;
         width: 50%;
-        object-fit: cover;
-        object-position: right;
     }
 
     .article-text {
@@ -558,11 +567,6 @@ select:focus {
         gap: 1rem;
     }
 
-    .contact-form-1,
-    .contact-form-2 {
-        flex: 1;
-    }
-
     .contact-form-2 {
         margin-top: 0;
     }
@@ -579,6 +583,10 @@ select:focus {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+    }
+
+    .ft-links-block div:first-of-type {
+        width: 25%;
     }
 
     .icon-text-block {
@@ -607,8 +615,6 @@ select:focus {
         flex-direction: row;
         min-height: initial;
         justify-content: space-between;
-        max-width: 1440px;
-        margin: auto;
         padding: 0;
     }
 
@@ -637,9 +643,10 @@ select:focus {
         margin-bottom: 0;
     }
 
+    nav,
     article:not(.jobs),
     .ft-main-content {
-        max-width: 1440px;
+        max-width: 1200px;
         margin: auto;
     }
 
