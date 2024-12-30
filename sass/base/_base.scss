@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as var;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var.$color-primary-bg;
     box-sizing: border-box;
