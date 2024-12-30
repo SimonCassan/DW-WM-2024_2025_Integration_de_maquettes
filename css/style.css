@@ -438,7 +438,7 @@ select:focus {
 }
 
 .phone_block:hover {
-    transform: scale(1.1) translateX(4px);
+    transform: scale(1.1);
 }
 
 .copyrights {
@@ -591,6 +591,10 @@ select:focus {
 
     .ft-links-block {
         text-align: left;
+    }
+
+    .phone_block:hover {
+        transform: scale(1.1) translateX(6px);
     }
 }
 
