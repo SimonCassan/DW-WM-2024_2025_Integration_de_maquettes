@@ -1,22 +1,6 @@
 @use '../abstracts/variables' as var;
 
 
-.code-animation {
-    opacity: 0;
-
-    &.animation-active {
-        display: inline-block;
-
-        &:nth-of-type(2n) {
-            animation: fromTheLeft 1.5s forwards;
-        }
-
-        &:nth-of-type(2n+1) {
-            animation: fromTheRight 1.5s forwards;
-        }
-    }
-}
-
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -50,6 +34,28 @@
         opacity: 1;
     }
 }
+
+@keyframes fromTheTop {
+    from {
+        transform: translateY(-90%);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 @keyframes slide-bg {
 

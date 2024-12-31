@@ -2,8 +2,9 @@
 
 @font-face {
     font-family: 'SFUIText';
-    src: url('../src/fonts/sfuitext-bold-webfont.woff2') format('woff2'),
-        url('../src/fonts/sfuitext-bold-webfont.woff') format('woff');
+    src: url('../src/fonts/SFUIText-Bold.woff2') format('woff2'),
+        url('../src/fonts/SFUIText-Bold.woff') format('woff'),
+        url('../src/fonts/SFUIText-Bold.ttf') format('truetype');
     font-weight: var.$font-weight-bold;
     font-style: normal;
 }
@@ -11,15 +12,17 @@
 @font-face {
     font-family: 'SFUIText';
     src: url('../src/fonts/SFUIText-Semibold.woff2') format('woff2'),
-        url('../src/fonts/SFUIText-Semibold.woff') format('woff');
+        url('../src/fonts/SFUIText-Semibold.woff') format('woff'),
+        url('../src/fonts/SFUIText-Semibold.ttf') format('truetype');
     font-weight: var.$font-weight-semibold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SFUIText';
-    src: url('../src/fonts/sfuitext-regular-webfont.woff2') format('woff2'),
-        url('../src/fonts/sfuitext-regular-webfont.woff') format('woff');
+    src: url('../src/fonts/SFUIText-Regular.woff2') format('woff2'),
+        url('../src/fonts/SFUIText-Regular.woff') format('woff'),
+        url('../src/fonts/SFUIText-Regular.ttf') format('truetype');
     font-weight: var.$font-weight-regular;
     font-style: normal;
 }
@@ -27,7 +30,8 @@
 @font-face {
     font-family: 'Hanken Grotesk';
     src: url('../src/fonts/HankenGrotesk-ExtraBold.woff2') format('woff2'),
-        url('../src/fonts/HankenGrotesk-ExtraBold.woff') format('woff');
+        url('../src/fonts/HankenGrotesk-ExtraBold.woff') format('woff'),
+        url('../src/fonts/HankenGrotesk-ExtraBold.ttf') format('truetype');
     font-weight: var.$font-weight-extrabold;
     font-style: normal;
 }
@@ -35,7 +39,8 @@
 @font-face {
     font-family: 'Hanken Grotesk';
     src: url('../src/fonts/HankenGrotesk-Bold.woff2') format('woff2'),
-        url('../src/fonts/HankenGrotesk-Bold.woff') format('woff');
+        url('../src/fonts/HankenGrotesk-Bold.woff') format('woff'),
+        url('../src/fonts/HankenGrotesk-Bold.ttf') format('truetype');
     font-weight: var.$font-weight-bold;
     font-style: normal;
 }
@@ -43,15 +48,17 @@
 @font-face {
     font-family: 'Hanken Grotesk';
     src: url('../src/fonts/HankenGrotesk-SemiBold.woff2') format('woff2'),
-        url('../src/fonts/HankenGrotesk-SemiBold.woff') format('woff');
+        url('../src/fonts/HankenGrotesk-SemiBold.woff') format('woff'),
+        url('../src/fonts/HankenGrotesk-SemiBold.ttf') format('truetype');
     font-weight: var.$font-weight-semibold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Hack-Regular';
-    src: url('../src/fonts/hack-regular-webfont.woff2') format('woff2'),
-        url('../src/fonts/hack-regular-webfont.woff') format('woff');
+    src: url('../src/fonts/Hack-Regular.woff2') format('woff2'),
+        url('../src/fonts/Hack-Regular.woff') format('woff'),
+        url('../src/fonts/Hack-Regular.ttf') format('truetype');
     font-weight: var.$font-weight-regular;
     font-style: normal;
 }

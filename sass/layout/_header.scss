@@ -1,10 +1,8 @@
 @use '../abstracts/variables' as var;
-@use '../abstracts/mixins' as mixin;
 
 header,
 .header-logo,
-.header-content,
-.arrow-down {
+.header-content {
     display: flex;
     align-items: center;
 }
@@ -59,12 +57,36 @@ header {
     }
 
     .header-img {
-        animation: fromTheRight 1.75s ease-out;
+        position: relative;
 
         img {
-            max-width: 100%;
+            opacity: 0;
+        }
+
+        &-lines {
+            position: absolute;
+            margin-top: -50px;
+            animation: fadeIn 0.3s forwards ease-in 1.9s;
+        }
+
+        &-1 {
+            animation: fromTheTop 1.25s forwards ease-out 1s;
+        }
+
+        &-2 {
+            animation: fromTheTop 1.25s forwards ease-out 0.5s;
+            margin-top: -60px;
+        }
+
+        &-3 {
+            animation: fromTheTop 1.25s forwards ease-out;
+            margin-top: -60px;
         }
     }
+}
+
+.arrow-down svg {
+    z-index: 15;
 }
 
 
@@ -85,18 +107,6 @@ header {
     h2 {
         font-size: 2.9rem;
     }
-}
-
-.arrow-down {
-    position: absolute;
-    bottom: 1rem;
-    border-radius: 50%;
-    border: 1px solid darkgrey;
-    background-color: #fff;
-    width: 2rem;
-    height: 2rem;
-    justify-content: center;
-    @include mixin.bg-gradient-hover;
 }
 
 // -------------------------------------------------
