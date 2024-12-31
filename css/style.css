@@ -271,7 +271,7 @@ article:not(.jobs) {
 
 .btn:hover {
     transform: scale(1.2) translateY(-2px);
-    animation: hover-gradient 1.5s cubic-bezier(0, 0, 0.2, 1.0);
+    animation: gradient-hover 1.5s cubic-bezier(0, 0, 0.2, 1.0);
 }
 
 .contact-form button:hover {
@@ -465,7 +465,7 @@ select:focus {
 /* ---------------------------------------------------------------------------------- */
 
 
-@keyframes hover-gradient {
+@keyframes gradient-hover {
     0% {
         background-position: 0;
     }
@@ -602,7 +602,7 @@ select:focus {
     }
 
     .phone_block:hover {
-        transform: scale(1.1) translateX(6px);
+        transform: scale(1.1) translateX(3px);
     }
 }
 
