@@ -570,24 +570,27 @@ select:focus {
         width: 50%;
     }
 
+    .article-text,
+    .article-text ul,
+    .cards-block {
+        align-items: initial;
+    }
+
     .article-text {
         box-sizing: content-box;
         margin-top: 0;
         margin-left: -0.5rem;
-        align-items: initial;
         text-align: initial;
         padding: 0 4rem;
     }
 
     .article-text ul {
-        align-items: initial;
         margin-left: 1.5rem;
     }
 
     .cards-block {
         flex-direction: row;
         justify-content: space-between;
-        align-items: stretch;
     }
 
     .card {
@@ -595,6 +598,15 @@ select:focus {
         height: initial;
         max-height: 100%;
         justify-content: center;
+    }
+
+    .card a,
+    .card:nth-of-type(3) h3 {
+        margin-top: auto;
+    }
+
+    .card:nth-of-type(2) h3 {
+        margin-top: 1.2rem;
     }
 
     .contact-form-box {
