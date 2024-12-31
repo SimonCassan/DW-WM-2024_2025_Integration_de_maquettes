@@ -11,3 +11,10 @@
         box-shadow: 0 3px 3px color.scale($color, $lightness: 15%);
     }
 }
+
+@mixin bg-gradient-hover {
+    &:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+    }
+}
