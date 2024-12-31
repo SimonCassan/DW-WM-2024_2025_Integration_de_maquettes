@@ -92,7 +92,7 @@ blockquote {
 #expertise,
 #historique,
 #contact {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 3rem;
 }
 
 
@@ -491,6 +491,13 @@ select:focus {
         background: linear-gradient(#fff, #fff 95%, #c4c4c4);
     }
 
+    #societe,
+    #expertise,
+    #historique,
+    #contact {
+        scroll-margin-top: 11rem;
+    }
+
     .hero-banner h1 {
         min-height: calc(100vh - 9.5rem);
         font-size: 2.5rem;
@@ -616,6 +623,13 @@ select:focus {
         min-height: initial;
         justify-content: space-between;
         padding: 0;
+    }
+
+    #societe,
+    #expertise,
+    #historique,
+    #contact {
+        scroll-margin-top: 7rem;
     }
 
     .hero-banner h1 {
