@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Asterial propose aux aéroports, aviations civiles, compagnies aériennes, sociétés d'assistance son expérience et la compétence de ses ingénieurs.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="./css/style-mini.css">
   <link rel="shortcut icon" href="./src/icons/red-star.png" type="image/png">
   <title>Asterial</title>
@@ -128,7 +124,7 @@
               <input type="text" name="fullname" placeholder="Nom & Prénom *" required>
               <input type="email" name="email" placeholder="E-mail *" required>
               <input type="tel" name="phone_number" placeholder="Téléphone *" required>
-              <select name="subject" required>
+              <select name="subject" aria-label="choisissez le sujet de votre message" required>
                 <option value="" disabled selected>Votre message concerne...</option>
                 <option value="prices">Demande de devis</option>
                 <option value="info">Renseignement</option>
