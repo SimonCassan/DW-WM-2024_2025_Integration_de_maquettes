@@ -1,9 +1,5 @@
 @use '../abstracts/variables' as var;
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: var.$color-primary-bg;
     box-sizing: border-box;
@@ -48,5 +44,12 @@ iframe {
     a:hover {
         text-decoration: underline;
         text-underline-offset: 3px;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }
