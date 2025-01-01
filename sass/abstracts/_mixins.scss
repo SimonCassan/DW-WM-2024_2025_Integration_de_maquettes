@@ -26,7 +26,7 @@
         $translateX: -50%;
     }
 
-    @else if $direction =='Right' {
+    @else {
         $translateX: 50%;
     }
 
