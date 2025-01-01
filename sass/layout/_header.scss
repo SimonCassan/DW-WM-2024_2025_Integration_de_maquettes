@@ -53,7 +53,7 @@ header {
     }
 
     .header-text {
-        animation: fromTheLeft 1.75s ease-out;
+        opacity: 0;
     }
 
     .header-img {
@@ -62,28 +62,37 @@ header {
         img {
             opacity: 0;
         }
+    }
+}
 
+.animate{
+    .header-text {
+        animation: fromTheLeft 2s forwards ease-out;
+    }
+
+    .header-img{
         &-lines {
             position: absolute;
             margin-top: -50px;
             animation: fadeIn 0.3s forwards ease-in 1.9s;
         }
-
+        
         &-1 {
             animation: fromTheTop 1.25s forwards ease-out 1s;
         }
-
+        
         &-2 {
             animation: fromTheTop 1.25s forwards ease-out 0.5s;
             margin-top: -60px;
         }
-
+        
         &-3 {
             animation: fromTheTop 1.25s forwards ease-out;
             margin-top: -60px;
         }
-    }
+    } 
 }
+
 
 .arrow-down svg {
     z-index: 15;

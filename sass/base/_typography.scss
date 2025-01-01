@@ -80,6 +80,13 @@ h3,
     font-family: var.$font-heading;
 }
 
+a,
+footer h2,
+footer h3,
+p {
+    font-family: var.$font-primary;
+}
+
 h1,
 h2 {
     font-weight: var.$font-weight-extrabold;
@@ -92,20 +99,13 @@ h3 {
 a,
 footer h2,
 footer h3,
-p {
-    font-family: var.$font-primary;
+footer p,
+.header-subtitle {
+    font-weight: var.$font-weight-semibold;
 }
 
 p {
     font-weight: var.$font-weight-regular;
-}
-
-a,
-footer h2,
-footer h3,
-footer p,
-.header-subtitle {
-    font-weight: var.$font-weight-semibold;
 }
 
 code {
