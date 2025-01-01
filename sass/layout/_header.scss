@@ -68,6 +68,7 @@ header {
 .animate{
     .header-text {
         animation: fromTheLeft 2s forwards ease-out;
+        will-change: transform, opacity;
     }
 
     .header-img{
