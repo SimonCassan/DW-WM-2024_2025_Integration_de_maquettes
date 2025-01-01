@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimonCassan/Prototypes.git"
+    "url": "git+https://github.com/SimonCassan/Qovery.git"
   },
   "author": "Simon Cassan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SimonCassan/Prototypes/issues"
+    "url": "https://github.com/SimonCassan/Qovery/issues"
   },
-  "homepage": "https://github.com/SimonCassan/Prototypes#readme",
+  "homepage": "https://github.com/SimonCassan/Qovery#readme",
   "description": "",
   "devDependencies": {
     "sass": "^1.83.0"
