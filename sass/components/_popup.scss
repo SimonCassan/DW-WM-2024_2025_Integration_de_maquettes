@@ -135,3 +135,10 @@
         }
     }
 }
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .popup-content {
+        transform: translate(-50%, -50%);
+    }
+}

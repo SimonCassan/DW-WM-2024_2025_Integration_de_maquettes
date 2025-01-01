@@ -39,7 +39,6 @@ header {
     justify-content: space-around;
     max-width: 1250px;
     padding: 4rem 2rem;
-    min-height: 70%;
 
     .header-block40 {
         max-width: 40%;
@@ -66,33 +65,32 @@ header {
     }
 }
 
-.animate{
+.animate {
     .header-text {
         animation: fromTheLeft 2s forwards ease-out;
-        will-change: transform, opacity;
     }
 
-    .header-img{
+    .header-img {
         &-lines {
             position: absolute;
             margin-top: -50px;
             animation: fadeIn 0.3s forwards ease-in 1.9s;
         }
-        
+
         &-1 {
             animation: fromTheTop 1.25s forwards ease-out 1s;
         }
-        
+
         &-2 {
             animation: fromTheTop 1.25s forwards ease-out 0.5s;
             margin-top: -60px;
         }
-        
+
         &-3 {
             animation: fromTheTop 1.25s forwards ease-out;
             margin-top: -60px;
         }
-    } 
+    }
 }
 
 
@@ -199,6 +197,14 @@ header {
 
         h1 {
             font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .animate {
+        .header-text {
+            animation: fromTheLeft 2s forwards cubic-bezier(.41, .11, .89, .15);
         }
     }
 }
