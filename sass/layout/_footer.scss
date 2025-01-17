@@ -41,7 +41,7 @@ footer {
 }
 
 .ft-main-block {
-    padding: 4rem 0 1rem;
+    padding: 4rem 1.5rem 1rem;
     max-width: 1250px;
     margin: auto;
 }
@@ -114,17 +114,10 @@ footer {
     }
 }
 
-@media screen and (max-width: var.$media-large) {
-    .ft-main-block {
-        margin: 0 1.5rem;
-    }
-}
+
+
 
 @media screen and (max-width: var.$media-medium) {
-    .ft-main-block {
-        margin: 0 1rem;
-    }
-
     .ft-logo {
         justify-content: center;
     }
