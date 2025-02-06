@@ -17,7 +17,7 @@ Discover **TechnoRaton**, a high-tech blog concept animated by a raccoon passion
 ## Demo
 
 The prototype is live and accessible online via GitHub Pages:
-[**TechnoRaton Live Demo**](<https://simoncassan.github.io/TechnoRaton/>)
+[**TechnoRaton Live Demo**](<https://simoncassan.github.io/DW-WM-2024_2025_Integration_de_maquettes/Technoraton/>)
 
 ## Screenshots
 
