@@ -1,0 +1,44 @@
+@use 'sass:color';
+
+
+@mixin btn-styles($color) {
+    &:hover {
+        background-color: color.scale($color, $lightness: -15%);
+        box-shadow: 0 5px 5px color.scale($color, $lightness: 15%);
+    }
+
+    &:active {
+        box-shadow: 0 3px 3px color.scale($color, $lightness: 15%);
+    }
+}
+
+@mixin bg-gradient-hover {
+    &:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+    }
+}
+
+@mixin slideIn($direction) {
+    $translateX: 0;
+
+    @if $direction =='Left' {
+        $translateX: -50%;
+    }
+
+    @else {
+        $translateX: 50%;
+    }
+
+    @keyframes fromThe#{$direction} {
+        0% {
+            transform: translateX($translateX);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mixin;
+
+
+.ft-logo,
+.ft-content,
+.ft-content-infos,
+.ft-content-infos-img,
+.ft-link-block,
+.ft-legal ul {
+    display: flex;
+}
+
+footer {
+    margin-top: 6rem;
+
+    p,
+    .ft-links a {
+        color: var.$color-secondary-txt;
+    }
+
+    h3 {
+        margin-bottom: 2rem;
+    }
+}
+
+.ft-bg-block {
+    max-width: 100%;
+    height: 120px;
+}
+
+// gradient animation for footer
+.ft-bg-block:before {
+    animation: slide-bg 18s infinite reverse;
+    background-image: var.$gradient-horizontal;
+    background-size: 150px 150px, 200%;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.ft-main-block {
+    padding: 4rem 1.5rem 1rem;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.ft-logo {
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    img {
+        margin-right: 0.5rem;
+    }
+}
+
+.ft-content {
+    justify-content: space-between;
+}
+
+.ft-content-infos {
+    max-width: 20%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ft-content-infos-img {
+    align-items: center;
+    gap: 1rem;
+
+    .icon-socials {
+        height: 28px;
+        border-radius: 0.2rem;
+        border: 1px solid #ddd;
+        padding: 5px;
+        @include mixin.bg-gradient-hover;
+    }
+
+}
+
+.ft-links {
+    li {
+        margin: 1rem 0;
+    }
+}
+
+/* --------------------------------- */
+
+
+.ft-legal ul {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    text-align: center;
+    border-top: 1px solid var.$color-secondary-txt;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+    a {
+        color: var.$color-regular-links;
+    }
+
+    li {
+        border-right: 1px solid var.$color-secondary-txt;
+        padding-right: 1rem;
+        margin: 1rem 0;
+
+        &:last-of-type {
+            border: none;
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: var.$media-medium) {
+    .ft-logo {
+        justify-content: center;
+    }
+
+    .ft-content {
+        flex-wrap: wrap;
+    }
+
+    .ft-content-infos {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        iframe {
+            margin-left: 5rem;
+        }
+    }
+
+    .ft-block-links {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: var.$media-medium-small) {
+    .ft-block-links {
+        width: 50%;
+
+        &:is(:nth-of-type(2), :nth-of-type(3)) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .ft-legal ul {
+        flex-direction: column;
+        border: none;
+        gap: 0;
+        padding-top: 0;
+
+        li {
+            border: none;
+            margin: 0.25rem 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: var.$media-small) {
+    footer h3 {
+        font-size: 1rem;
+    }
+
+    .ft-links a {
+        font-size: 0.95rem;
+    }
+
+}

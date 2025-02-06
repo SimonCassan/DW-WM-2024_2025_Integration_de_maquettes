@@ -1,0 +1,25 @@
+{
+  "name": "qovery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass-c": "sass --watch ./sass/main.scss ./css/style.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonCassan/Qovery.git"
+  },
+  "author": "Simon Cassan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonCassan/Qovery/issues"
+  },
+  "homepage": "https://github.com/SimonCassan/Qovery#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.19.3"
+  }
+}
