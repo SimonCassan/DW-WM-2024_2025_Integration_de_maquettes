@@ -2,7 +2,7 @@
 
 This project is a fully responsive webpage dedicated to presenting the planets of our Solar System. Each planet is showcased with a brief description and an accompanying illustration to enhance the user experience.
 
-**The website is available online at**: [GitHub Pages/Planets](https://simoncassan.github.io/DW-WM-2024_2025_Integration_de_maquettes/Planets/)
+**The website is available online at**: [GitHub Pages/Planets](https://simoncassan.github.io/DWWM-2024_2025_Integration_de_maquettes/Planets/)
 
 ## Features
 
