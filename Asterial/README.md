@@ -2,7 +2,7 @@
 
 A responsive website built based on a provided design mockup. Asterial features a sticky navigation bar, a contact form, hover effects on links, and diverse sections with unique layouts to enhance user experience.
 
-**The website is available online at**: [https://simoncassan.github.io/Asterial](https://simoncassan.github.io/Asterial)
+**The website is available online at**: [GitHub Pages/Asterial](https://simoncassan.github.io/DW-WM-2024_2025_Integration_de_maquettes/Asterial/)
 
 ## Table of Contents
 
