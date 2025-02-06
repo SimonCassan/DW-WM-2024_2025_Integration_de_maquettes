@@ -1,0 +1,210 @@
+@use '../abstracts/variables' as var;
+
+header,
+.header-logo,
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+header {
+
+    h2,
+    p {
+        color: #fff;
+    }
+}
+
+header {
+    background-image: url('../src/ressources/background_header.svg');
+    background-size: cover;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    gap: 1rem;
+
+    h1 {
+        color: var.$color-primary-heading;
+        line-height: 2rem;
+    }
+}
+
+.header-content {
+    justify-content: space-around;
+    max-width: 1250px;
+    padding: 4rem 2rem;
+
+    .header-block40 {
+        max-width: 40%;
+    }
+
+    .header-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .card-github {
+        padding: 0 15px;
+    }
+
+    .header-text {
+        opacity: 0;
+    }
+
+    .header-img {
+        position: relative;
+
+        img {
+            opacity: 0;
+        }
+    }
+}
+
+.animate {
+    .header-text {
+        animation: fromTheLeft 2s forwards ease-out;
+    }
+
+    .header-img {
+        &-lines {
+            position: absolute;
+            margin-top: -50px;
+            animation: fadeIn 0.3s forwards ease-in 1.9s;
+        }
+
+        &-1 {
+            animation: fromTheTop 1.25s forwards ease-out 1s;
+        }
+
+        &-2 {
+            animation: fromTheTop 1.25s forwards ease-out 0.5s;
+            margin-top: -60px;
+        }
+
+        &-3 {
+            animation: fromTheTop 1.25s forwards ease-out;
+            margin-top: -60px;
+        }
+    }
+}
+
+
+.arrow-down svg {
+    z-index: 4;
+}
+
+
+// ---------------------------------------------------
+
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header-text-h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+
+    h2 {
+        font-size: 2.9rem;
+    }
+}
+
+// -------------------------------------------------
+
+
+@media screen and (max-width:var.$media-large) {
+    .header-logo {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .header-text-h2 {
+        flex-direction: column;
+    }
+
+    header .btn {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:var.$media-medium) {
+    .header-logo {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .header-content {
+        justify-content: center;
+        margin-top: 6rem;
+
+        .header-block40 {
+            max-width: 80%;
+        }
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    header .btn,
+    .header-text,
+    .header-text-h2 {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:var.$media-small) {
+    .header-content {
+        margin-top: 3rem;
+    }
+
+    header {
+        h2 {
+            white-space: wrap;
+        }
+
+        .header-subtitle {
+            display: none;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+@media screen and (max-height: 800px) {
+    .header-logo {
+        svg {
+            width: 30px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .animate {
+        .header-text {
+            animation: fromTheLeft 2s forwards cubic-bezier(.41, .11, .89, .15);
+        }
+    }
+}

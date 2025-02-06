@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as var;
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(var.$color-secondary-bg, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+
+    &-content {
+        position: absolute;
+        max-width: 1200px;
+        top: 50%;
+        left: 50%;
+        width: 75%;
+        background-color: var.$color-primary-bg;
+        box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 1rem;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: transform 0.3s 0.1s, opacity 0.35s 0.1s;
+    }
+
+    &-close {
+        color: darkgray;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 4rem;
+        line-height: 0.5;
+        text-decoration: none;
+        display: inline-block;
+        transition: color 0.2s;
+
+        &:hover {
+            color: var.$color-regular-links;
+        }
+    }
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-right {
+        width: 67%;
+        padding: 3rem 5rem;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &-content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &-text {
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid lightgray;
+        hyphens: auto;
+    }
+}
+
+@media screen and (max-width: var.$media-large) {
+    .popup-content {
+        flex-direction: column;
+        padding: 2rem 2rem;
+    }
+
+    .popup-right {
+        padding: 0;
+        width: initial;
+    }
+}
+
+@media screen and (max-width: var.$media-medium) {
+    .popup {
+        &-content {
+            padding-top: 4rem;
+            max-height: 700px;
+            overflow-y: auto;
+
+            img {
+                position: absolute;
+                top: 1rem;
+                left: 2rem;
+                width: 50px;
+            }
+        }
+
+        &-text {
+            column-count: 1;
+        }
+    }
+}
+
+@media screen and (max-width: var.$media-medium-small) {
+    .popup {
+        &-content {
+            padding: 1rem;
+        }
+
+        &-content img,
+        &-text p:last-of-type {
+            display: none;
+        }
+
+        &-text {
+            font-size: 0.9rem;
+        }
+
+        &-close {
+            font-size: 2rem;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .popup-content {
+        transform: translate(-50%, -50%);
+    }
+}

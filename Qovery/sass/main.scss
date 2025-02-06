@@ -1,0 +1,10 @@
+@use './base/reset';
+@use './base/typography';
+@use './base/base.scss';
+@use './layout/main-content';
+@use './layout/header';
+@use './layout/footer';
+@use './components/buttons';
+@use './components/animations';
+@use './components/popup';
+@use './components/slider';
