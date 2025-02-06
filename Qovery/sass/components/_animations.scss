@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@include mixins.slideIn("Left");
+@include mixins.slideIn("Right");
+
+@keyframes fromTheTop {
+    from {
+        transform: translateY(-90%);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-bg {
+
+    0%,
+    100% {
+        background-position: 0 0, 0 0;
+    }
+
+    50% {
+        background-position: 0 0, 100% 100%;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    @keyframes fromTheLeft {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fromTheRight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fromTheTop {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
