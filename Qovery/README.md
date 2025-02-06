@@ -20,4 +20,4 @@ This project is a redesign of the old version of the **Qovery.com** website, cre
 ## Demo
 
 The prototype is live and accessible online via GitHub Pages:
-[**Qovery Live Demo**](<https://simoncassan.github.io/Qovery/>)
+[**Qovery Live Demo**](<https://simoncassan.github.io/DW-WM-2024_2025_Integration_de_maquettes/Qovery/>)
